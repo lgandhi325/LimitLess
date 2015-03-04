@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.limitless.app;
 
 import android.app.Application;
 

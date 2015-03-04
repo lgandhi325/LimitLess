@@ -1,8 +1,9 @@
-package com.parse.starter;
+package com.limitless.app;
 
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.limiteless.app.R;
 import com.parse.ParseAnalytics;
 
 public class ParseStarterProjectActivity extends Activity {
