@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Palette taken from here: http://www.colourlovers.com/palette/435174/Karmas_Payment -->
+    <color name="ganymede">#B1E6D1</color>
+    <color name="sad_sappy_sucker">#77B1A9</color>
+    <color name="notus">#3D7B80</color>
+    <color name="roisin_murphey">#270A33</color>
+    <color name="lots_wife">#451A3E</color>
+</resources>
