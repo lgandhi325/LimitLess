@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="15dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/post_details_layout"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/op_profile_image"
+                    android:layout_centerVertical="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/op"
+                    android:layout_toRightOf="@id/op_profile_image"
+                    android:layout_width="fill_parent"
+                    android:textColor="@color/blue"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/time_elapsed"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/blue"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="17sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:padding="20dp"
+                android:gravity="center"
+                android:id="@+id/image_post_view"
+                android:layout_below="@id/post_details_layout"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
