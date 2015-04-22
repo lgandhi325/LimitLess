@@ -1,63 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="15dp"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <android.support.v7.widget.CardView
+    <RelativeLayout
         android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:id="@+id/post_details_layout"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp">
-
-                <ImageView
-                    android:id="@+id/op_profile_image"
-                    android:layout_centerVertical="true"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp" />
-
-                <TextView
-                    android:id="@+id/op"
-                    android:layout_toRightOf="@id/op_profile_image"
-                    android:layout_width="fill_parent"
-                    android:textColor="@color/blue"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="20sp"
-                    android:layout_centerVertical="true"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/time_elapsed"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/blue"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:textSize="17sp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="10dp" />
-            </RelativeLayout>
+            android:id="@+id/post_details_layout"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
 
             <ImageView
-                android:padding="20dp"
-                android:gravity="center"
-                android:id="@+id/image_post_view"
-                android:layout_below="@id/post_details_layout"
-                android:scaleType="fitXY"
-                android:adjustViewBounds="true"
+                android:id="@+id/op_profile_image"
+                android:layout_centerVertical="true"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:id="@+id/op"
+                android:layout_toRightOf="@id/op_profile_image"
                 android:layout_width="fill_parent"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
                 android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/time_elapsed"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp" />
         </RelativeLayout>
-    </android.support.v7.widget.CardView>
+
+        <!--<View
+            android:layout_above="@+id/image_post_view"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white" />-->
+
+        <ImageView
+            android:gravity="center"
+            android:id="@+id/image_post_view"
+            android:layout_below="@id/post_details_layout"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+<!--        <View
+            android:layout_below="@id/image_post_view"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/blue" />-->
+
+        <LinearLayout
+            android:layout_below="@id/image_post_view"
+            android:padding="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_action_camera"
+                android:background="@color/blue"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <ImageView
+                android:src="@drawable/ic_action_search"
+                android:background="@color/blue"
+                android:layout_marginLeft="25dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <ImageView
+                android:src="@drawable/ic_drawer"
+                android:background="@color/blue"
+                android:layout_marginLeft="25dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:indeterminate="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
 </RelativeLayout>

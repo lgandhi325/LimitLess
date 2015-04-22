@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,10 +28,12 @@ import com.limitless.app.data.LimitlessDataSource;
 import com.limitless.app.interfaces.LimitLessGenericCallback;
 import com.limitless.app.utils.KeyboardUtil;
 import com.parse.LogInCallback;
+import com.parse.Parse;
 import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener, LimitLessGenericCallback<Void> {
     public static final String TAG = MainActivity.class.getName();
@@ -60,6 +63,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     // Loading Layout
     private View loadingLayout;
+
+    private ImageView backgroundImage;
 
     private enum SplashActionLayout {
         BUTTON, LOGIN, SIGNUP, LOADING;
@@ -153,6 +158,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), "fonts/zapfino.ttf");
         TextView myTextView = (TextView)findViewById(R.id.myTextView);
         myTextView.setTypeface(myTypeface);
+
+        backgroundImage = (ImageView) findViewById(R.id.background_image);
+
+        Picasso.with(this)
+                .load(R.drawable.home_bg_2)
+                .fit()
+                .into(backgroundImage);
+
+        if (!ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())) {
+            signUpButton.setVisibility(View.GONE);
+            logInButton.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -279,6 +296,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             user.signUpInBackground(new SignUpCallback() {
                 public void done(ParseException e) {
                     if (e == null) {
+                        new AlertDialog.Builder(MainActivity.this)
+                                .setMessage("Stop! This app is meant to build up, not tear down, so please, leave your ego at the splash screen.")
+                                .setPositiveButton("You got it!", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    initData();
+                                    }
+                                }).show();
                         initData();
                     } else {
                         Log.e(TAG, "Sign Up", e);
@@ -292,19 +317,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     private void goToHomeActivity() {
-        new AlertDialog.Builder(this)
-                .setMessage("Stop! This app is meant to build up, not tear down, so please, leave your ego at the splash screen.")
-                .setPositiveButton("You got it!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent homeActivityIntent = new Intent(MainActivity.this, LandingActivity.class);
-                        homeActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        homeActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(homeActivityIntent);
-                    }
-                }).show();
-
-
+        Intent homeActivityIntent = new Intent(MainActivity.this, LandingActivity.class);
+        homeActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        homeActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(homeActivityIntent);
     }
 
     private void initData() {

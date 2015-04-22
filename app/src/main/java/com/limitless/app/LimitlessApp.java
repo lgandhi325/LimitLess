@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.limitless.app.domainObjects.Post;
 import com.limitless.app.domainObjects.UserFollows;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseObject;
@@ -36,6 +38,11 @@ public class LimitlessApp extends Application {
         defaultACL.setPublicReadAccess(true);
 
         ParseACL.setDefaultACL(defaultACL, true);
+
+        ImageLoaderConfiguration configuration =
+                ImageLoaderConfiguration.createDefault(this);
+
+        ImageLoader.getInstance().init(configuration);
     }
 
     public static Application getApp() {

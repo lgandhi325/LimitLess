@@ -56,6 +56,7 @@
         <RelativeLayout
             android:layout_weight="1"
             android:padding="10dp"
+            android:onClick="startImageIntent"
             android:background="@android:color/white"
             android:orientation="vertical"
             android:layout_width="0dp"
@@ -94,8 +95,13 @@
             android:layout_height="fill_parent">
 
             <ImageView
+                android:id="@+id/profile_image_view"
                 android:layout_above="@+id/icon_3_text"
-                android:background="@color/blue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <ProgressBar
+                android:id="@+id/profile_image_loader"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" />
 
