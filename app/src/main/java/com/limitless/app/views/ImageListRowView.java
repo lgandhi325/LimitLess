@@ -30,8 +30,6 @@ public class ImageListRowView extends  PostRowView {
     private TextView datePosted;
     private ImageView opImageView;
 
-    private ProgressBar pb;
-
     public ImageListRowView(Context context) {
         super(context);
         if(!isInEditMode()) init(context);
@@ -54,57 +52,18 @@ public class ImageListRowView extends  PostRowView {
         op = (TextView) findViewById(R.id.op);
         opImageView = (ImageView) findViewById(R.id.op_profile_image);
         datePosted = (TextView) findViewById(R.id.time_elapsed);
-        pb = (ProgressBar) findViewById(R.id.progress_bar);
-        pb.setVisibility(GONE);
     }
 
     @Override
     public void setData(Post data) {
-        Picasso.with(getContext()).load(data.getImage().getUrl()).into(imageView, new Callback() {
-            @Override
-            public void onSuccess() {
-
-            }
-
-            @Override
-            public void onError() {
-
-            }
-        });
+        Picasso.with(getContext()).load(data.getImage().getUrl()).into(imageView);
         op.setText(data.getUser().getUsername());
         datePosted.setText(ViewUtil.getTimeElapsed(data.getCreatedAt()));
 
         if(data.getUser().getParseFile("profileImage") != null) {
-            ImageLoader.getInstance()
-
-                    .displayImage(ParseUser.getCurrentUser().getParseFile("profileImage").getUrl(),
-                            opImageView, null, new ImageLoadingListener() {
-                                @Override
-                                public void onLoadingStarted(String imageUri, View view) {
-
-                                }
-
-                                @Override
-                                public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-
-                                }
-
-                                @Override
-                                public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-                                    pb.setVisibility(View.GONE);
-                                }
-
-                                @Override
-                                public void onLoadingCancelled(String imageUri, View view) {
-
-                                }
-                            }, new ImageLoadingProgressListener() {
-                                @Override
-                                public void onProgressUpdate(String imageUri, View view, int current, int total) {
-                                    pb.setProgress(current);
-                                }
-                            });
-
+            Picasso.with(getContext())
+                    .load(ParseUser.getCurrentUser().getParseFile("profileImage").getUrl())
+                    .into(opImageView);
         } else {
             opImageView.setVisibility(GONE);
         }
