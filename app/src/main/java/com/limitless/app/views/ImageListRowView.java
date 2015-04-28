@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.limitless.app.R;
 import com.limitless.app.domainObjects.Post;
+import com.limitless.app.utils.FlipAnimation;
 import com.limitless.app.utils.ViewUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
@@ -29,6 +30,9 @@ public class ImageListRowView extends  PostRowView {
     private TextView op;
     private TextView datePosted;
     private ImageView opImageView;
+
+    private View frontView;
+    private View backView;
 
     public ImageListRowView(Context context) {
         super(context);
@@ -52,11 +56,22 @@ public class ImageListRowView extends  PostRowView {
         op = (TextView) findViewById(R.id.op);
         opImageView = (ImageView) findViewById(R.id.op_profile_image);
         datePosted = (TextView) findViewById(R.id.time_elapsed);
+
+        //frontView = findViewById(R.id.card_front);
+        //backView = findViewById(R.id.card_back);
     }
 
     @Override
     public void setData(Post data) {
         Picasso.with(getContext()).load(data.getImage().getUrl()).into(imageView);
+
+        /*imageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flipCard();
+            }
+        });*/
+
         op.setText(data.getUser().getUsername());
         datePosted.setText(ViewUtil.getTimeElapsed(data.getCreatedAt()));
 
@@ -68,4 +83,15 @@ public class ImageListRowView extends  PostRowView {
             opImageView.setVisibility(GONE);
         }
     }
+
+    /*private void flipCard()
+    {
+        FlipAnimation flipAnimation = new FlipAnimation(frontView, backView);
+
+        if (getVisibility() == View.GONE)
+        {
+            flipAnimation.reverse();
+        }
+        startAnimation(flipAnimation);
+    }*/
 }

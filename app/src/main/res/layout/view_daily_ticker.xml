@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:background="@drawable/blue_background_white_border"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content">
 
     <RelativeLayout
@@ -13,7 +13,7 @@
 
         <TextView
             android:id="@+id/daily_ticker_header_title"
-            android:text="Jump start your day!"
+            android:text="Jumpstart your day!"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:gravity="center"
@@ -53,6 +53,7 @@
         android:id="@+id/ticker_post_button"
         android:textColor="@android:color/white"
         android:background="@android:color/black"
+        android:layout_margin="2dp"
         android:layout_width="fill_parent"
         android:layout_height="50dp" />
 
