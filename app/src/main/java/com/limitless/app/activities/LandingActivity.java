@@ -1,6 +1,8 @@
 package com.limitless.app.activities;
 
+import android.app.AlertDialog;
 import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.os.PersistableBundle;
 import android.provider.MediaStore;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
@@ -23,9 +26,11 @@ import android.widget.Toast;
 
 import com.limitless.app.R;
 import com.limitless.app.data.LimitlessDataSource;
+import com.limitless.app.dialogs.DailyTickerDialog;
 import com.limitless.app.domainObjects.Post;
 import com.limitless.app.enums.PostType;
 import com.limitless.app.utils.ImageUtil;
+import com.limitless.app.views.DailyTickerView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
@@ -49,11 +54,14 @@ public class LandingActivity extends ActionBarActivity implements View.OnClickLi
     private final String TAG = LandingActivity.class.getName();
     private ImageView profileItemImage;
     private ProgressBar profileProgressBar;
+    private DailyTickerView tickerView;
 
     private static final int REQUEST_IMAGE_CAPTURE = 1001;
     private static final int IMAGE_SIDE_LENGTH = 1024;
     private String mCurrentPhotoPath;
     private Uri outputFileUri;
+
+    DialogFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +76,7 @@ public class LandingActivity extends ActionBarActivity implements View.OnClickLi
 
         profileItemImage = (ImageView) findViewById(R.id.profile_image_view);
         profileProgressBar = (ProgressBar) findViewById(R.id.profile_image_loader);
+        tickerView = (DailyTickerView) findViewById(R.id.daily_ticker_view);
 
         ImageLoader.getInstance()
                 .displayImage(ParseUser.getCurrentUser().getParseFile("profileImage").getUrl(),
@@ -105,6 +114,10 @@ public class LandingActivity extends ActionBarActivity implements View.OnClickLi
         Typeface myTypeface = Typeface.createFromAsset(getAssets(), "fonts/zapfino.ttf");
         TextView myTextView = (TextView)findViewById(R.id.myTextView);
         myTextView.setTypeface(myTypeface);
+
+        tickerView.setVisibility(View.GONE);
+        fragment = DailyTickerDialog.newInstance();
+        fragment.show(getSupportFragmentManager(), DailyTickerDialog.class.getName());
     }
 
     @Override
@@ -217,5 +230,15 @@ public class LandingActivity extends ActionBarActivity implements View.OnClickLi
         } catch (FileNotFoundException e) {
             Log.e(TAG, "could not find image file", e);
         }
+    }
+
+    public void onTickerPostClicked(View v) {
+        tickerView.setVisibility(View.GONE);
+        startImageIntent(v);
+    }
+
+    public void onTickerCancelClicked(View v) {
+        tickerView.setVisibility(View.GONE);
+        fragment.dismiss();
     }
 }
