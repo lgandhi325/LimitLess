@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/classes-afa866d115b8af204bc830aae97da09b90abc7fa.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/libs/Parse-1.8.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="56dfc827c23c1f0be64eff2ef556633ea95b16ad">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/Parse-1.8.3-6a0019b0f8c39ecbdc6bac562792ab76efd08962.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/library-2.4.0-a6ab85ed601d454ff4ccc80b0a02e994fd054eaa.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.2.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="65620ba5e576dcec2c86efa440b00d042a27383b">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/classes-5479b9d2f37509630ef72e6ef165b5123ac1f607.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-ec9332a4ad64f72f4dfa5e047720f9900054d663.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.0/7ff0e000d1e27e356567f56c92af3b8ab912636f/picasso-2.5.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ff0e000d1e27e356567f56c92af3b8ab912636f">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/picasso-2.5.0-652c08b9d4e5598cfac6371dc6552f0a51bbff30.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/libs/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-67ecfe675aefe6075e7ba341a798405a90945d4e.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-555163605cb478cc761af4f6becb64bfb1cc1d1d.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/classes-9774ce89c1c605f11ca6a125543229f3b0ab46ba.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-bad718b8c7c2225829f67b361f7eb382f4711254.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/classes-30a977f65816041780eda023cd9e4b0653478915.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/0.9.10/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="745b8b723976a3ff95ecc84e60d90acbf82130b4">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/classes-920a426e75d4940dd197407bda5cc1be3b2c1161.jar" />
+    </item>
+    <item
+        jar="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d">
+        <dex dex="/Users/anthonylipscomb/Development/apps/LimitLess/app/build/intermediates/pre-dexed/debug/classes-72f802c056ae81ec4cb925734cdfb5a4b3dc9c27.jar" />
+    </item>
+
+</items>

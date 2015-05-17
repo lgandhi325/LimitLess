@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLAFeedContainerViewController">
+            <connections>
+                <outlet property="backButton" destination="frq-tZ-Mbc" id="Kww-im-8KB"/>
+                <outlet property="topDividerView" destination="WbS-Ur-Ik0" id="4QI-pV-3jN"/>
+                <outlet property="view" destination="lku-CD-vkq" id="LSR-0C-jIF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lku-CD-vkq">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limitless" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-Gb-XfR">
+                    <rect key="frame" x="50" y="8" width="314" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="aax-qN-qsi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-Ur-Ik0">
+                    <rect key="frame" x="0.0" y="62" width="414" height="2"/>
+                    <color key="backgroundColor" red="0.13725490870000001" green="0.71372550729999995" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="Lfc-Ir-VSh"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-Ie-B5v">
+                    <rect key="frame" x="347" y="15" width="75" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Bmk-Zd-O7t"/>
+                        <constraint firstAttribute="width" constant="75" id="mRG-lF-KDe"/>
+                    </constraints>
+                    <state key="normal" image="Camera-White">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frq-tZ-Mbc">
+                    <rect key="frame" x="8" y="24" width="46" height="30"/>
+                    <state key="normal" title="Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="EeB-Ia-ALe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WbS-Ur-Ik0" firstAttribute="leading" secondItem="lku-CD-vkq" secondAttribute="leading" id="2lM-7B-C56"/>
+                <constraint firstItem="nhj-Ie-B5v" firstAttribute="top" secondItem="lku-CD-vkq" secondAttribute="top" constant="15" id="3VZ-en-xcX"/>
+                <constraint firstItem="WbS-Ur-Ik0" firstAttribute="top" secondItem="lku-CD-vkq" secondAttribute="top" constant="62" id="6H7-4g-Sob"/>
+                <constraint firstItem="5Se-Gb-XfR" firstAttribute="leading" secondItem="lku-CD-vkq" secondAttribute="leading" constant="50" id="6c4-sx-6KT"/>
+                <constraint firstAttribute="trailing" secondItem="WbS-Ur-Ik0" secondAttribute="trailing" id="Iud-QG-QA8"/>
+                <constraint firstItem="5Se-Gb-XfR" firstAttribute="top" secondItem="lku-CD-vkq" secondAttribute="top" constant="8" id="JLE-hy-ybj"/>
+                <constraint firstAttribute="trailing" secondItem="5Se-Gb-XfR" secondAttribute="trailing" constant="50" id="Lhb-CH-7mQ"/>
+                <constraint firstItem="WbS-Ur-Ik0" firstAttribute="leading" secondItem="lku-CD-vkq" secondAttribute="leading" id="aDE-4O-9jv"/>
+                <constraint firstAttribute="trailing" secondItem="nhj-Ie-B5v" secondAttribute="trailing" constant="-8" id="uxN-h4-LmR"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="-35" y="468"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera-White" width="50" height="50"/>
+    </resources>
+</document>

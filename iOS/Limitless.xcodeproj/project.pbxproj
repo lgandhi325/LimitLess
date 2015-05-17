@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A567156DD470E0647649DFF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 821E580E7FE979187BD0A00A /* libPods.a */; };
+		D237B16C1B00025400242170 /* LLALoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D237B16A1B00025400242170 /* LLALoginView.m */; };
+		D237B16D1B00025400242170 /* LLALoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D237B16B1B00025400242170 /* LLALoginView.xib */; };
+		D2A150EC1B09536000922600 /* LLAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A150EB1B09536000922600 /* LLAUser.m */; };
+		D2BD5E841B05A6DC00E9F17E /* LLAPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */; };
+		D2BD5E861B05AD0400E9F17E /* LLAPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */; };
+		D2CDB3801B01B0D000300BB4 /* LLAFeedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB37E1B01B0D000300BB4 /* LLAFeedContainerViewController.m */; };
+		D2CDB3811B01B0D000300BB4 /* LLAFeedContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2CDB37F1B01B0D000300BB4 /* LLAFeedContainerViewController.xib */; };
+		D2CDB3851B01B18000300BB4 /* LLAFeedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB3831B01B18000300BB4 /* LLAFeedItemViewController.m */; };
+		D2CDB3861B01B18000300BB4 /* LLAFeedItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2CDB3841B01B18000300BB4 /* LLAFeedItemViewController.xib */; };
+		D2F851631AFC485400B5D3AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F851621AFC485400B5D3AD /* main.m */; };
+		D2F851661AFC485400B5D3AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F851651AFC485400B5D3AD /* AppDelegate.m */; };
+		D2F8516E1AFC485400B5D3AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F8516D1AFC485400B5D3AD /* Images.xcassets */; };
+		D2F8517D1AFC485400B5D3AD /* LimitlessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F8517C1AFC485400B5D3AD /* LimitlessTests.m */; };
+		D2F851891AFC49B000B5D3AD /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F851871AFC49B000B5D3AD /* SplashViewController.m */; };
+		D2F8518A1AFC49B000B5D3AD /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F851881AFC49B000B5D3AD /* SplashViewController.xib */; };
+		D2F8518D1AFC49D200B5D3AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F8518B1AFC49D200B5D3AD /* LaunchScreen.xib */; };
+		D2F851931AFC4CAD00B5D3AD /* LLALandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F851911AFC4CAD00B5D3AD /* LLALandingViewController.m */; };
+		D2F851941AFC4CAD00B5D3AD /* LLALandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F851921AFC4CAD00B5D3AD /* LLALandingViewController.xib */; };
+		D2F8519B1AFC556400B5D3AD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851991AFC556400B5D3AD /* Bolts.framework */; };
+		D2F8519C1AFC556400B5D3AD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F8519A1AFC556400B5D3AD /* Parse.framework */; };
+		D2F8519F1AFC55EF00B5D3AD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F8519D1AFC55E000B5D3AD /* AudioToolbox.framework */; };
+		D2F851A21AFC560300B5D3AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851A01AFC55FC00B5D3AD /* CFNetwork.framework */; };
+		D2F851A51AFC564600B5D3AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851A31AFC563A00B5D3AD /* CoreGraphics.framework */; };
+		D2F851A81AFC565B00B5D3AD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851A61AFC565000B5D3AD /* CoreLocation.framework */; };
+		D2F851AB1AFC566D00B5D3AD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851A91AFC566600B5D3AD /* MobileCoreServices.framework */; };
+		D2F851AE1AFC568500B5D3AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851AC1AFC567B00B5D3AD /* QuartzCore.framework */; };
+		D2F851B11AFC569900B5D3AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851AF1AFC568F00B5D3AD /* Security.framework */; };
+		D2F851B41AFC56AA00B5D3AD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851B21AFC56A200B5D3AD /* StoreKit.framework */; };
+		D2F851B71AFC56BF00B5D3AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851B51AFC56B500B5D3AD /* SystemConfiguration.framework */; };
+		D2F851B91AFC56CB00B5D3AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851B81AFC56CB00B5D3AD /* libz.dylib */; };
+		D2F851BB1AFC56DC00B5D3AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851BA1AFC56DC00B5D3AD /* libsqlite3.dylib */; };
+		D2F851C01AFC585100B5D3AD /* LLADailyFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F851BE1AFC585100B5D3AD /* LLADailyFeedViewController.m */; };
+		D2F851C11AFC585100B5D3AD /* LLADailyFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F851BF1AFC585100B5D3AD /* LLADailyFeedViewController.xib */; };
+		D2F851C51AFDA49700B5D3AD /* UIColor+LimitlessColors.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F851C41AFDA49700B5D3AD /* UIColor+LimitlessColors.m */; };
+		D2F851C81AFDD63300B5D3AD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851C61AFDD61300B5D3AD /* Social.framework */; };
+		D2F851CB1AFDD64A00B5D3AD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851C91AFDD63B00B5D3AD /* Accounts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2F851771AFC485400B5D3AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2F851551AFC485400B5D3AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2F8515C1AFC485400B5D3AD;
+			remoteInfo = Limitless;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06571D409504109B018FB76A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2DAED4D1E51399AC5A6C440E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		821E580E7FE979187BD0A00A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D237B1691B00025400242170 /* LLALoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALoginView.h; path = Splash/LLALoginView.h; sourceTree = "<group>"; };
+		D237B16A1B00025400242170 /* LLALoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALoginView.m; path = Splash/LLALoginView.m; sourceTree = "<group>"; };
+		D237B16B1B00025400242170 /* LLALoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLALoginView.xib; path = Splash/LLALoginView.xib; sourceTree = "<group>"; };
+		D2A150EA1B09536000922600 /* LLAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAUser.h; path = Objects/LLAUser.h; sourceTree = "<group>"; };
+		D2A150EB1B09536000922600 /* LLAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAUser.m; path = Objects/LLAUser.m; sourceTree = "<group>"; };
+		D2BD5E821B05A6DC00E9F17E /* LLAPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAPostViewController.h; path = Post/LLAPostViewController.h; sourceTree = "<group>"; };
+		D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAPostViewController.m; path = Post/LLAPostViewController.m; sourceTree = "<group>"; };
+		D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLAPostViewController.xib; sourceTree = "<group>"; };
+		D2CDB37D1B01B0D000300BB4 /* LLAFeedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAFeedContainerViewController.h; path = DailyFeed/LLAFeedContainerViewController.h; sourceTree = "<group>"; };
+		D2CDB37E1B01B0D000300BB4 /* LLAFeedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAFeedContainerViewController.m; path = DailyFeed/LLAFeedContainerViewController.m; sourceTree = "<group>"; };
+		D2CDB37F1B01B0D000300BB4 /* LLAFeedContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLAFeedContainerViewController.xib; path = DailyFeed/LLAFeedContainerViewController.xib; sourceTree = "<group>"; };
+		D2CDB3821B01B18000300BB4 /* LLAFeedItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAFeedItemViewController.h; path = DailyFeed/LLAFeedItemViewController.h; sourceTree = "<group>"; };
+		D2CDB3831B01B18000300BB4 /* LLAFeedItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAFeedItemViewController.m; path = DailyFeed/LLAFeedItemViewController.m; sourceTree = "<group>"; };
+		D2CDB3841B01B18000300BB4 /* LLAFeedItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLAFeedItemViewController.xib; path = DailyFeed/LLAFeedItemViewController.xib; sourceTree = "<group>"; };
+		D2F8515D1AFC485400B5D3AD /* Limitless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limitless.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F851611AFC485400B5D3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F851621AFC485400B5D3AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2F851641AFC485400B5D3AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D2F851651AFC485400B5D3AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D2F8516D1AFC485400B5D3AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D2F851761AFC485400B5D3AD /* LimitlessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimitlessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F8517B1AFC485400B5D3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F8517C1AFC485400B5D3AD /* LimitlessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitlessTests.m; sourceTree = "<group>"; };
+		D2F851861AFC49B000B5D3AD /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		D2F851871AFC49B000B5D3AD /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		D2F851881AFC49B000B5D3AD /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		D2F8518C1AFC49D200B5D3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D2F851901AFC4CAD00B5D3AD /* LLALandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALandingViewController.h; path = Landing/LLALandingViewController.h; sourceTree = "<group>"; };
+		D2F851911AFC4CAD00B5D3AD /* LLALandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALandingViewController.m; path = Landing/LLALandingViewController.m; sourceTree = "<group>"; };
+		D2F851921AFC4CAD00B5D3AD /* LLALandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLALandingViewController.xib; path = Landing/LLALandingViewController.xib; sourceTree = "<group>"; };
+		D2F851991AFC556400B5D3AD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D2F8519A1AFC556400B5D3AD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D2F8519D1AFC55E000B5D3AD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D2F851A01AFC55FC00B5D3AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D2F851A31AFC563A00B5D3AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2F851A61AFC565000B5D3AD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D2F851A91AFC566600B5D3AD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D2F851AC1AFC567B00B5D3AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2F851AF1AFC568F00B5D3AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D2F851B21AFC56A200B5D3AD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D2F851B51AFC56B500B5D3AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2F851B81AFC56CB00B5D3AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D2F851BA1AFC56DC00B5D3AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D2F851BD1AFC585100B5D3AD /* LLADailyFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLADailyFeedViewController.h; path = DailyFeed/LLADailyFeedViewController.h; sourceTree = "<group>"; };
+		D2F851BE1AFC585100B5D3AD /* LLADailyFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLADailyFeedViewController.m; path = DailyFeed/LLADailyFeedViewController.m; sourceTree = "<group>"; };
+		D2F851BF1AFC585100B5D3AD /* LLADailyFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLADailyFeedViewController.xib; path = DailyFeed/LLADailyFeedViewController.xib; sourceTree = "<group>"; };
+		D2F851C31AFDA49700B5D3AD /* UIColor+LimitlessColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+LimitlessColors.h"; path = "Categories/UIColor+LimitlessColors.h"; sourceTree = "<group>"; };
+		D2F851C41AFDA49700B5D3AD /* UIColor+LimitlessColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LimitlessColors.m"; path = "Categories/UIColor+LimitlessColors.m"; sourceTree = "<group>"; };
+		D2F851C61AFDD61300B5D3AD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D2F851C91AFDD63B00B5D3AD /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D2F851D11AFDDE0500B5D3AD /* LLALoginActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALoginActionDelegate.h; path = Splash/Delegates/LLALoginActionDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2F8515A1AFC485400B5D3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F851CB1AFDD64A00B5D3AD /* Accounts.framework in Frameworks */,
+				D2F851C81AFDD63300B5D3AD /* Social.framework in Frameworks */,
+				D2F851BB1AFC56DC00B5D3AD /* libsqlite3.dylib in Frameworks */,
+				D2F851B91AFC56CB00B5D3AD /* libz.dylib in Frameworks */,
+				D2F851B11AFC569900B5D3AD /* Security.framework in Frameworks */,
+				D2F851B71AFC56BF00B5D3AD /* SystemConfiguration.framework in Frameworks */,
+				D2F851B41AFC56AA00B5D3AD /* StoreKit.framework in Frameworks */,
+				D2F851AB1AFC566D00B5D3AD /* MobileCoreServices.framework in Frameworks */,
+				D2F851AE1AFC568500B5D3AD /* QuartzCore.framework in Frameworks */,
+				D2F851A21AFC560300B5D3AD /* CFNetwork.framework in Frameworks */,
+				D2F851A81AFC565B00B5D3AD /* CoreLocation.framework in Frameworks */,
+				D2F851A51AFC564600B5D3AD /* CoreGraphics.framework in Frameworks */,
+				D2F8519C1AFC556400B5D3AD /* Parse.framework in Frameworks */,
+				D2F8519F1AFC55EF00B5D3AD /* AudioToolbox.framework in Frameworks */,
+				D2F8519B1AFC556400B5D3AD /* Bolts.framework in Frameworks */,
+				5A567156DD470E0647649DFF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F851731AFC485400B5D3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93F74D6845AE4960A62D3EC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				821E580E7FE979187BD0A00A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5BA5A1DD209E32FE20CFA66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06571D409504109B018FB76A /* Pods.debug.xcconfig */,
+				2DAED4D1E51399AC5A6C440E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2A150E91B09532D00922600 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		D2BD5E811B05A6B700E9F17E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD5E821B05A6DC00E9F17E /* LLAPostViewController.h */,
+				D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */,
+				D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		D2CDB3771B019ACA00300BB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D2CDB3871B01BF6C00300BB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2A150EA1B09536000922600 /* LLAUser.h */,
+				D2A150EB1B09536000922600 /* LLAUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D2F851541AFC485400B5D3AD = {
+			isa = PBXGroup;
+			children = (
+				D2F8515F1AFC485400B5D3AD /* Limitless */,
+				D2F851791AFC485400B5D3AD /* LimitlessTests */,
+				D2F8515E1AFC485400B5D3AD /* Products */,
+				B5BA5A1DD209E32FE20CFA66 /* Pods */,
+				93F74D6845AE4960A62D3EC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D2F8515E1AFC485400B5D3AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2F8515D1AFC485400B5D3AD /* Limitless.app */,
+				D2F851761AFC485400B5D3AD /* LimitlessTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2F8515F1AFC485400B5D3AD /* Limitless */ = {
+			isa = PBXGroup;
+			children = (
+				D2A150E91B09532D00922600 /* Data */,
+				D2CDB3871B01BF6C00300BB4 /* Models */,
+				D2F851C21AFDA44800B5D3AD /* Categories */,
+				D2F851981AFC555A00B5D3AD /* Frameworks */,
+				D2F851961AFC4CCA00B5D3AD /* Controllers */,
+				D2F8518B1AFC49D200B5D3AD /* LaunchScreen.xib */,
+				D2F851641AFC485400B5D3AD /* AppDelegate.h */,
+				D2F851651AFC485400B5D3AD /* AppDelegate.m */,
+				D2F8516D1AFC485400B5D3AD /* Images.xcassets */,
+				D2F851601AFC485400B5D3AD /* Supporting Files */,
+			);
+			path = Limitless;
+			sourceTree = "<group>";
+		};
+		D2F851601AFC485400B5D3AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F851611AFC485400B5D3AD /* Info.plist */,
+				D2F851621AFC485400B5D3AD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2F851791AFC485400B5D3AD /* LimitlessTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2F8517C1AFC485400B5D3AD /* LimitlessTests.m */,
+				D2F8517A1AFC485400B5D3AD /* Supporting Files */,
+			);
+			path = LimitlessTests;
+			sourceTree = "<group>";
+		};
+		D2F8517A1AFC485400B5D3AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F8517B1AFC485400B5D3AD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2F851951AFC4CB600B5D3AD /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				D2F851901AFC4CAD00B5D3AD /* LLALandingViewController.h */,
+				D2F851911AFC4CAD00B5D3AD /* LLALandingViewController.m */,
+				D2F851921AFC4CAD00B5D3AD /* LLALandingViewController.xib */,
+			);
+			name = Landing;
+			sourceTree = "<group>";
+		};
+		D2F851961AFC4CCA00B5D3AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD5E811B05A6B700E9F17E /* Post */,
+				D2F851BC1AFC583800B5D3AD /* DailyFeed */,
+				D2F851971AFC4CD900B5D3AD /* Splash */,
+				D2F851951AFC4CB600B5D3AD /* Landing */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D2F851971AFC4CD900B5D3AD /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D2F851D01AFDDD8C00B5D3AD /* Delegates */,
+				D2F851CC1AFDD7B100B5D3AD /* Views */,
+				D2F851861AFC49B000B5D3AD /* SplashViewController.h */,
+				D2F851871AFC49B000B5D3AD /* SplashViewController.m */,
+				D2F851881AFC49B000B5D3AD /* SplashViewController.xib */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		D2F851981AFC555A00B5D3AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2F851BA1AFC56DC00B5D3AD /* libsqlite3.dylib */,
+				D2F851B81AFC56CB00B5D3AD /* libz.dylib */,
+				D2F851C91AFDD63B00B5D3AD /* Accounts.framework */,
+				D2F851C61AFDD61300B5D3AD /* Social.framework */,
+				D2F851B51AFC56B500B5D3AD /* SystemConfiguration.framework */,
+				D2F851B21AFC56A200B5D3AD /* StoreKit.framework */,
+				D2F851AF1AFC568F00B5D3AD /* Security.framework */,
+				D2F851AC1AFC567B00B5D3AD /* QuartzCore.framework */,
+				D2F851A91AFC566600B5D3AD /* MobileCoreServices.framework */,
+				D2F851A61AFC565000B5D3AD /* CoreLocation.framework */,
+				D2F851A31AFC563A00B5D3AD /* CoreGraphics.framework */,
+				D2F851A01AFC55FC00B5D3AD /* CFNetwork.framework */,
+				D2F8519D1AFC55E000B5D3AD /* AudioToolbox.framework */,
+				D2F851991AFC556400B5D3AD /* Bolts.framework */,
+				D2F8519A1AFC556400B5D3AD /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2F851BC1AFC583800B5D3AD /* DailyFeed */ = {
+			isa = PBXGroup;
+			children = (
+				D2CDB3821B01B18000300BB4 /* LLAFeedItemViewController.h */,
+				D2CDB3831B01B18000300BB4 /* LLAFeedItemViewController.m */,
+				D2CDB3841B01B18000300BB4 /* LLAFeedItemViewController.xib */,
+				D2CDB3771B019ACA00300BB4 /* Views */,
+				D2F851BD1AFC585100B5D3AD /* LLADailyFeedViewController.h */,
+				D2F851BE1AFC585100B5D3AD /* LLADailyFeedViewController.m */,
+				D2F851BF1AFC585100B5D3AD /* LLADailyFeedViewController.xib */,
+				D2CDB37D1B01B0D000300BB4 /* LLAFeedContainerViewController.h */,
+				D2CDB37E1B01B0D000300BB4 /* LLAFeedContainerViewController.m */,
+				D2CDB37F1B01B0D000300BB4 /* LLAFeedContainerViewController.xib */,
+			);
+			name = DailyFeed;
+			sourceTree = "<group>";
+		};
+		D2F851C21AFDA44800B5D3AD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D2F851C31AFDA49700B5D3AD /* UIColor+LimitlessColors.h */,
+				D2F851C41AFDA49700B5D3AD /* UIColor+LimitlessColors.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D2F851CC1AFDD7B100B5D3AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D237B1691B00025400242170 /* LLALoginView.h */,
+				D237B16A1B00025400242170 /* LLALoginView.m */,
+				D237B16B1B00025400242170 /* LLALoginView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D2F851D01AFDDD8C00B5D3AD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D2F851D11AFDDE0500B5D3AD /* LLALoginActionDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2F8515C1AFC485400B5D3AD /* Limitless */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F851801AFC485400B5D3AD /* Build configuration list for PBXNativeTarget "Limitless" */;
+			buildPhases = (
+				1482C4B6472A4A32471D6E3A /* Check Pods Manifest.lock */,
+				D2F851591AFC485400B5D3AD /* Sources */,
+				D2F8515A1AFC485400B5D3AD /* Frameworks */,
+				D2F8515B1AFC485400B5D3AD /* Resources */,
+				52A9D4F3E6D1F07EA6AAC5BB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Limitless;
+			productName = Limitless;
+			productReference = D2F8515D1AFC485400B5D3AD /* Limitless.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2F851751AFC485400B5D3AD /* LimitlessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F851831AFC485400B5D3AD /* Build configuration list for PBXNativeTarget "LimitlessTests" */;
+			buildPhases = (
+				D2F851721AFC485400B5D3AD /* Sources */,
+				D2F851731AFC485400B5D3AD /* Frameworks */,
+				D2F851741AFC485400B5D3AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2F851781AFC485400B5D3AD /* PBXTargetDependency */,
+			);
+			name = LimitlessTests;
+			productName = LimitlessTests;
+			productReference = D2F851761AFC485400B5D3AD /* LimitlessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2F851551AFC485400B5D3AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Honycomb;
+				TargetAttributes = {
+					D2F8515C1AFC485400B5D3AD = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = PFHLGXN94M;
+					};
+					D2F851751AFC485400B5D3AD = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = D2F8515C1AFC485400B5D3AD;
+					};
+				};
+			};
+			buildConfigurationList = D2F851581AFC485400B5D3AD /* Build configuration list for PBXProject "Limitless" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2F851541AFC485400B5D3AD;
+			productRefGroup = D2F8515E1AFC485400B5D3AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2F8515C1AFC485400B5D3AD /* Limitless */,
+				D2F851751AFC485400B5D3AD /* LimitlessTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2F8515B1AFC485400B5D3AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BD5E861B05AD0400E9F17E /* LLAPostViewController.xib in Resources */,
+				D2F851C11AFC585100B5D3AD /* LLADailyFeedViewController.xib in Resources */,
+				D2F8516E1AFC485400B5D3AD /* Images.xcassets in Resources */,
+				D2CDB3811B01B0D000300BB4 /* LLAFeedContainerViewController.xib in Resources */,
+				D2F8518D1AFC49D200B5D3AD /* LaunchScreen.xib in Resources */,
+				D2F851941AFC4CAD00B5D3AD /* LLALandingViewController.xib in Resources */,
+				D237B16D1B00025400242170 /* LLALoginView.xib in Resources */,
+				D2F8518A1AFC49B000B5D3AD /* SplashViewController.xib in Resources */,
+				D2CDB3861B01B18000300BB4 /* LLAFeedItemViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F851741AFC485400B5D3AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1482C4B6472A4A32471D6E3A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52A9D4F3E6D1F07EA6AAC5BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2F851591AFC485400B5D3AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CDB3801B01B0D000300BB4 /* LLAFeedContainerViewController.m in Sources */,
+				D2F851661AFC485400B5D3AD /* AppDelegate.m in Sources */,
+				D2F851631AFC485400B5D3AD /* main.m in Sources */,
+				D2CDB3851B01B18000300BB4 /* LLAFeedItemViewController.m in Sources */,
+				D237B16C1B00025400242170 /* LLALoginView.m in Sources */,
+				D2F851C51AFDA49700B5D3AD /* UIColor+LimitlessColors.m in Sources */,
+				D2F851931AFC4CAD00B5D3AD /* LLALandingViewController.m in Sources */,
+				D2F851C01AFC585100B5D3AD /* LLADailyFeedViewController.m in Sources */,
+				D2A150EC1B09536000922600 /* LLAUser.m in Sources */,
+				D2BD5E841B05A6DC00E9F17E /* LLAPostViewController.m in Sources */,
+				D2F851891AFC49B000B5D3AD /* SplashViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F851721AFC485400B5D3AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F8517D1AFC485400B5D3AD /* LimitlessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2F851781AFC485400B5D3AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2F8515C1AFC485400B5D3AD /* Limitless */;
+			targetProxy = D2F851771AFC485400B5D3AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2F8518B1AFC49D200B5D3AD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2F8518C1AFC49D200B5D3AD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2F8517E1AFC485400B5D3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2F8517F1AFC485400B5D3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2F851811AFC485400B5D3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06571D409504109B018FB76A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Limitless",
+				);
+				INFOPLIST_FILE = Limitless/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		D2F851821AFC485400B5D3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DAED4D1E51399AC5A6C440E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Limitless",
+				);
+				INFOPLIST_FILE = Limitless/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		D2F851841AFC485400B5D3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LimitlessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Limitless.app/Limitless";
+			};
+			name = Debug;
+		};
+		D2F851851AFC485400B5D3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LimitlessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Limitless.app/Limitless";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2F851581AFC485400B5D3AD /* Build configuration list for PBXProject "Limitless" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F8517E1AFC485400B5D3AD /* Debug */,
+				D2F8517F1AFC485400B5D3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2F851801AFC485400B5D3AD /* Build configuration list for PBXNativeTarget "Limitless" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F851811AFC485400B5D3AD /* Debug */,
+				D2F851821AFC485400B5D3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2F851831AFC485400B5D3AD /* Build configuration list for PBXNativeTarget "LimitlessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F851841AFC485400B5D3AD /* Debug */,
+				D2F851851AFC485400B5D3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2F851551AFC485400B5D3AD /* Project object */;
+}

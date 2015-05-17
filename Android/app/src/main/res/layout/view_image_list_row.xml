@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/image_list_row_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_weight="20"
+        android:id="@+id/post_details_layout"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/op_profile_image"
+            android:layout_centerVertical="true"
+            android:layout_width="55dp"
+            android:layout_height="55dp" />
+
+        <TextView
+            android:id="@+id/op"
+            android:layout_toRightOf="@id/op_profile_image"
+            android:layout_width="fill_parent"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/time_elapsed"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/row_front"
+        android:layout_weight="60"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:gravity="center"
+            android:id="@+id/image_post_view"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/row_back"
+        android:visibility="gone"
+        android:layout_weight="60"
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/details_image_view"
+                android:text="FLIPPED"
+                android:gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/details_caption_text_view"
+                android:layout_toRightOf="@id/details_image_view"
+                android:layout_toEndOf="@id/details_image_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/details_like_button"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_like_action"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <ImageView
+                android:id="@+id/details_comment_button"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_comment"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <ImageView
+                android:id="@+id/details_share_button"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_comment"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_weight="20"
+        android:layout_below="@id/image_post_view"
+        android:padding="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:src="@drawable/ic_like_action"
+            android:background="@color/blue"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+        <ImageView
+            android:src="@drawable/ic_comment"
+            android:background="@color/blue"
+            android:layout_marginLeft="25dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+        <ImageView
+            android:src="@drawable/ic_drawer"
+            android:background="@color/blue"
+            android:layout_marginLeft="25dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLAFeedItemViewController">
+            <connections>
+                <outlet property="commentButton" destination="JLb-CL-PeQ" id="cmZ-kT-KvV"/>
+                <outlet property="flipButton" destination="PFP-SP-TFd" id="P5d-21-kHn"/>
+                <outlet property="likeButton" destination="yzd-RD-18l" id="ZUt-2g-vWh"/>
+                <outlet property="opImage" destination="D45-oA-Mu4" id="2XK-W7-99U"/>
+                <outlet property="postImage" destination="eKn-PH-a6U" id="8yc-Iv-Us9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eKn-PH-a6U">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="414" id="OOz-zV-fKo"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D45-oA-Mu4">
+                    <rect key="frame" x="8" y="663" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="H7A-gO-WAo"/>
+                        <constraint firstAttribute="width" constant="65" id="RB8-tt-mcx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-SP-TFd">
+                    <rect key="frame" x="356" y="663" width="50" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="ch6-Lc-NPM"/>
+                    </constraints>
+                    <state key="normal" image="Flip">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="flipButtonTapped:" destination="-1" eventType="touchUpInside" id="w9c-mS-8W0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLb-CL-PeQ">
+                    <rect key="frame" x="298" y="663" width="50" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Tyn-y5-Pg2"/>
+                    </constraints>
+                    <state key="normal" image="Quote">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzd-RD-18l">
+                    <rect key="frame" x="240" y="663" width="50" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Kz2-yG-5Ij"/>
+                    </constraints>
+                    <state key="normal" image="Star-Unselected">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="likeButtonTapped:" destination="-1" eventType="touchUpInside" id="C1m-cx-zwo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yzd-RD-18l" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="7Eq-0w-Se7"/>
+                <constraint firstItem="yzd-RD-18l" firstAttribute="top" secondItem="JLb-CL-PeQ" secondAttribute="top" id="8C0-i9-L5A"/>
+                <constraint firstItem="PFP-SP-TFd" firstAttribute="leading" secondItem="JLb-CL-PeQ" secondAttribute="trailing" constant="8" symbolic="YES" id="AaD-eQ-EZc"/>
+                <constraint firstItem="JLb-CL-PeQ" firstAttribute="top" secondItem="PFP-SP-TFd" secondAttribute="top" id="AsD-QJ-A97"/>
+                <constraint firstItem="JLb-CL-PeQ" firstAttribute="leading" secondItem="yzd-RD-18l" secondAttribute="trailing" constant="8" symbolic="YES" id="BFE-r4-Agt"/>
+                <constraint firstAttribute="trailing" secondItem="eKn-PH-a6U" secondAttribute="trailing" id="BQc-ah-P42"/>
+                <constraint firstItem="yzd-RD-18l" firstAttribute="centerY" secondItem="D45-oA-Mu4" secondAttribute="centerY" id="GgG-HK-HTu"/>
+                <constraint firstItem="yzd-RD-18l" firstAttribute="centerY" secondItem="PFP-SP-TFd" secondAttribute="centerY" id="L70-fa-5d5"/>
+                <constraint firstItem="D45-oA-Mu4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LHi-ZG-fKV"/>
+                <constraint firstItem="yzd-RD-18l" firstAttribute="centerY" secondItem="JLb-CL-PeQ" secondAttribute="centerY" id="Ma9-Pl-bPq"/>
+                <constraint firstAttribute="bottom" secondItem="D45-oA-Mu4" secondAttribute="bottom" constant="8" id="Mzt-c5-7Ys"/>
+                <constraint firstItem="PFP-SP-TFd" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="abQ-wt-N4l"/>
+                <constraint firstItem="D45-oA-Mu4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="cxO-Bq-3hw"/>
+                <constraint firstItem="eKn-PH-a6U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fFE-7R-sYh"/>
+                <constraint firstItem="eKn-PH-a6U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pHe-dw-rHq"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Flip" width="50" height="50"/>
+        <image name="Quote" width="50" height="50"/>
+        <image name="Star-Unselected" width="50" height="50"/>
+    </resources>
+</document>

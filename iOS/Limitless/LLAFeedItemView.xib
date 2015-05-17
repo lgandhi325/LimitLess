@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jQg-kj-qAQ">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullSizeRender" translatesAutoresizingMaskIntoConstraints="NO" id="UGX-DW-I0m">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UGX-DW-I0m" secondAttribute="height" multiplier="1:1" id="afo-Qh-yIb"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullSizeRender" translatesAutoresizingMaskIntoConstraints="NO" id="ZHE-u5-5Zw">
+                    <rect key="frame" x="8" y="542" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DsC-oX-5v6"/>
+                        <constraint firstAttribute="width" constant="50" id="EJ3-pX-7O6"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Jre-QA-9oM"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="RKy-f6-1ce"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHb-i1-fjJ">
+                    <rect key="frame" x="542" y="542" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="d6X-ha-WbP"/>
+                        <constraint firstAttribute="width" constant="50" id="uZy-L5-eLE"/>
+                    </constraints>
+                    <state key="normal" image="Flip">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck6-P9-Q23">
+                    <rect key="frame" x="426" y="542" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="3V1-Ra-NxR"/>
+                        <constraint firstAttribute="height" constant="50" id="IGw-bJ-33V"/>
+                    </constraints>
+                    <state key="normal" image="like-outline">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Krishna Ghandi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dJ-zp-YGg">
+                    <rect key="frame" x="66" y="542" width="352" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="m4i-e9-BUj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLP-BH-uZ2">
+                    <rect key="frame" x="484" y="542" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0fq-8N-Bvx"/>
+                        <constraint firstAttribute="width" constant="50" id="Y1h-Up-2Rv"/>
+                    </constraints>
+                    <state key="normal" image="Quote">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iHb-i1-fjJ" firstAttribute="leading" secondItem="pLP-BH-uZ2" secondAttribute="trailing" constant="8" id="2XW-hB-vOn"/>
+                <constraint firstItem="UGX-DW-I0m" firstAttribute="top" secondItem="jQg-kj-qAQ" secondAttribute="top" id="727-r9-2Qh"/>
+                <constraint firstItem="ck6-P9-Q23" firstAttribute="leading" secondItem="3dJ-zp-YGg" secondAttribute="trailing" constant="8" id="883-2T-zla"/>
+                <constraint firstAttribute="bottom" secondItem="ck6-P9-Q23" secondAttribute="bottom" constant="8" id="AAQ-0y-gkU"/>
+                <constraint firstItem="pLP-BH-uZ2" firstAttribute="leading" secondItem="ck6-P9-Q23" secondAttribute="trailing" constant="8" id="AOq-EE-IEl"/>
+                <constraint firstItem="pLP-BH-uZ2" firstAttribute="leading" secondItem="ck6-P9-Q23" secondAttribute="trailing" constant="8" id="CQJ-bd-PGs"/>
+                <constraint firstItem="3dJ-zp-YGg" firstAttribute="leading" secondItem="ZHE-u5-5Zw" secondAttribute="trailing" constant="8" id="Ef1-Co-aqA"/>
+                <constraint firstAttribute="bottom" secondItem="iHb-i1-fjJ" secondAttribute="bottom" constant="8" id="Lr4-Fb-D3Z"/>
+                <constraint firstAttribute="trailing" secondItem="UGX-DW-I0m" secondAttribute="trailing" id="Sux-Ax-gCQ"/>
+                <constraint firstItem="UGX-DW-I0m" firstAttribute="leading" secondItem="jQg-kj-qAQ" secondAttribute="leading" id="b75-1n-mFv"/>
+                <constraint firstItem="iHb-i1-fjJ" firstAttribute="leading" secondItem="pLP-BH-uZ2" secondAttribute="trailing" constant="8" id="fm1-8y-7D3"/>
+                <constraint firstItem="ZHE-u5-5Zw" firstAttribute="leading" secondItem="jQg-kj-qAQ" secondAttribute="leading" constant="8" id="h7N-8T-9Qd"/>
+                <constraint firstAttribute="trailing" secondItem="iHb-i1-fjJ" secondAttribute="trailing" constant="8" id="ofp-py-tte"/>
+                <constraint firstAttribute="bottom" secondItem="3dJ-zp-YGg" secondAttribute="bottom" constant="8" id="pDl-cD-N4N"/>
+                <constraint firstAttribute="bottom" secondItem="pLP-BH-uZ2" secondAttribute="bottom" constant="8" id="qu3-yW-tUA"/>
+                <constraint firstAttribute="bottom" secondItem="ZHE-u5-5Zw" secondAttribute="bottom" constant="8" id="wPR-M6-OJG"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Flip" width="50" height="50"/>
+        <image name="FullSizeRender" width="1024" height="1365"/>
+        <image name="Quote" width="50" height="50"/>
+        <image name="like-outline" width="50" height="50"/>
+    </resources>
+</document>
