@@ -8,6 +8,8 @@
 
 #import "LLAFeedContainerViewController.h"
 #import "LLAFeeditemViewController.h"
+#import "LLAUser.h"
+#import "LLARepository.h"
 #import "UIView+Toast.h"
 #import <Parse/Parse.h>
 
@@ -34,32 +36,9 @@
 }
 
 - (void) retrieveData {
-    PFQuery *query = [PFQuery queryWithClassName:@"UserFollows"];
-    [query whereKey:@"followedBy" equalTo:[PFUser currentUser]];
-    [query includeKey:@"following"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            
-        } else {
-            NSMutableArray *userList = [NSMutableArray new];
-            
-            for(PFObject *object in objects) {
-                [userList addObject:[object objectForKey:@"following"]];
-            }
-            
-            PFQuery *postsQuery = [PFQuery queryWithClassName:@"Post"];
-            [postsQuery whereKey:@"user" containedIn:userList];
-            [postsQuery includeKey:@"user"];
-            [postsQuery orderByDescending:@"createdAt"];
-            [postsQuery findObjectsInBackgroundWithBlock:^(NSArray *postObjects, NSError *error) {
-                if (error) {
-                    NSLog(@"Error: %@", error);
-                } else {
-                    [self setPosts:postObjects];
-                    [self.pageController reloadInputViews];
-                }
-            }];
-        }
+    [[LLARepository default] postsWithBlock:^(NSArray *data, NSError *error) {
+        self.posts = data;
+        [self.pageController reloadInputViews];
     }];
 }
 

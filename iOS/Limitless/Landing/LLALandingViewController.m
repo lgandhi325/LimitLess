@@ -10,12 +10,15 @@
 #import "LLADailyFeedViewController.h"
 #import "SplashViewController.h"
 #import "LLAFeedContainerViewController.h"
+#import "LLAProfileViewController.h"
 #import "LLAPostViewController.h"
+#import "LLAUser.h"
 #import <Parse/Parse.h>
 
 @interface LLALandingViewController ()
 @property (weak, nonatomic) IBOutlet UIView *dailyFeedContainer;
 @property (weak, nonatomic) IBOutlet UIView *socialContainer;
+@property (weak, nonatomic) IBOutlet UIView *profileContainer;
 
 @end
 
@@ -28,11 +31,12 @@
 }
 
 - (void)setDailyFeedTapGesture {
-    UIGestureRecognizer *dfTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                           action:@selector(handleDailyFeedTap:)];
-    dfTapGR.delegate = self;
-    [self.dailyFeedContainer addGestureRecognizer:dfTapGR];
-    //[self.socialContainer addGestureRecognizer:dfTapGR];
+//    UIGestureRecognizer *dfTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self
+//                                                                           action:@selector(handleDailyFeedTap:)];
+//    dfTapGR.delegate = self;
+//    [self.dailyFeedContainer addGestureRecognizer:dfTapGR];
+//    [self.socialContainer addGestureRecognizer:dfTapGR];
+//    [self.profileContainer addGestureRecognizer:dfTapGR];
 }
 
 - (void)setSocialTapGesture {
@@ -60,10 +64,16 @@
         dfvc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
         [self presentViewController:dfvc animated:YES completion:nil];
     }
+    
+    if(sender.view == self.profileContainer) {
+        LLAProfileViewController *profileVC = [LLAProfileViewController new];
+        [profileVC setUser:[LLAUser currentUser]];
+        [self presentViewController:profileVC animated:YES completion:nil];
+    }
 }
 
 - (void)handleSocialTap:(UITapGestureRecognizer *)sender {
-    [PFUser logOut];
+    [LLAUser logOut];
     SplashViewController *svc = [SplashViewController new];
     [self presentViewController:svc animated:YES completion:nil];
 }

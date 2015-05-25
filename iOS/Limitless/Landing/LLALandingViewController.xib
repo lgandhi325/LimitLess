@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLALandingViewController">
             <connections>
                 <outlet property="dailyFeedContainer" destination="Pp6-ss-may" id="ebv-tC-FuY"/>
+                <outlet property="profileContainer" destination="zt9-4Y-GVo" id="lEn-j4-Z07"/>
                 <outlet property="socialContainer" destination="nf1-pz-6qB" id="M2F-rn-SMT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -68,7 +69,7 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="TW1-eS-tFR"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yie-fK-heu">
@@ -97,7 +98,7 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="OSm-Rf-oBb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Po-M7-SHJ">
@@ -130,7 +131,7 @@
                                 <constraint firstAttribute="height" constant="25" id="HB3-cQ-obX"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmN-UK-Vqy">

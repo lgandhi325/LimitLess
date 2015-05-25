@@ -7,6 +7,7 @@
 //
 
 #import "LLAFeedItemViewController.h"
+#import "LLAUser.h"
 #import <UIImageView+AFNetworking.h>
 #import <Parse/Parse.h>
 
@@ -47,7 +48,7 @@
 
 - (void) upvote:(BOOL)selected {
     __weak typeof(self) weakSelf = self;
-    PFUser *user = [PFUser currentUser];
+    LLAUser *user = [LLAUser currentUser];
     PFQuery *upvoteExistsQuery = [PFQuery queryWithClassName:@"PostUpvotes"];
     [upvoteExistsQuery whereKey:@"post" equalTo:self.postObject];
     [upvoteExistsQuery whereKey:@"user" equalTo:user];
@@ -75,13 +76,13 @@
     [super viewDidLoad];
     
     PFFile *mainFile = (PFFile*)[self.postObject objectForKey:@"image"];
-    PFUser *poster = (PFUser*)[self.postObject objectForKey:@"user"];
+    LLAUser *poster = (LLAUser*)[self.postObject objectForKey:@"user"];
     
     NSURLRequest *postImageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:mainFile.url]
                                                       cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                   timeoutInterval:60];
     
-    NSURLRequest *posterImageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:((PFFile*)[poster objectForKey:@"profileImage"]).url]
+    NSURLRequest *posterImageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:poster.profileImage.url]
                                                       cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                   timeoutInterval:60];
     

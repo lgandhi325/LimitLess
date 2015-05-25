@@ -6,8 +6,14 @@
 //  Copyright (c) 2015 Honycomb. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface LLAUser : NSObject
+@interface LLAUser : PFUser
+
+@property (nonatomic) NSString *firstname;
+@property (nonatomic) NSString *lastname;
+@property (nonatomic) PFFile *profileImage;
+
++ (LLAUser *)currentUser;
 
 @end

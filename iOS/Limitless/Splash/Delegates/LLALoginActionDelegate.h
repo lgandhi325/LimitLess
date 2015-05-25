@@ -10,6 +10,8 @@
 
 @protocol LLALoginActionDelegate
 
-- (void)loginActionRequestedFromView:(LLALoginView*)view asUser:(NSString*)user withPassword:(NSString*)password;
+- (void)loginActionRequestedFromLoginView:(LLALoginView*)view asUser:(NSString*)user withPassword:(NSString*)password;
+
+- (void)backActionRequestedFromLoginView:(LLALoginView*)view;
 
 @end

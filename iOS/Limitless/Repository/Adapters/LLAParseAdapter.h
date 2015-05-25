@@ -1,5 +1,5 @@
 //
-//  LLAPost.h
+//  LLAParseAdapter.h
 //  Limitless
 //
 //  Created by Anthony Lipscomb on 5/18/15.
@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LLARepositoryProtocol.h"
 
-@interface LLAPost : NSObject
+
+@interface LLAParseAdapter : NSObject <LLARepositoryProtocol>
 
 @end

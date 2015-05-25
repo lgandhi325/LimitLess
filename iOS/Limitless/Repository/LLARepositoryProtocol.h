@@ -1,5 +1,5 @@
 //
-//  LLAPost.h
+//  LLARepositoryProtocol.h
 //  Limitless
 //
 //  Created by Anthony Lipscomb on 5/18/15.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LLAPost : NSObject
+@protocol LLARepositoryProtocol <NSObject>
+
+- (void)getPostsWithBlock:(void(^)(NSArray *, NSError *))block;
 
 @end

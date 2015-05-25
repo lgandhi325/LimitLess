@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LLALoginActionDelegate.h"
 
 @interface LLALoginView : UIView
+
+@property (nonatomic) id<LLALoginActionDelegate> delegate;
 
 @end

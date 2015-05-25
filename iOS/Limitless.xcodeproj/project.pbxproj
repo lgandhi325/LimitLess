@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		5A567156DD470E0647649DFF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 821E580E7FE979187BD0A00A /* libPods.a */; };
 		D237B16C1B00025400242170 /* LLALoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D237B16A1B00025400242170 /* LLALoginView.m */; };
-		D237B16D1B00025400242170 /* LLALoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D237B16B1B00025400242170 /* LLALoginView.xib */; };
+		D256CC3B1B0AE819008BB9DB /* LLALandingNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D256CC3A1B0AE819008BB9DB /* LLALandingNavigationViewController.m */; };
+		D267BCF51B0AD2E70006713B /* LLARepository.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BCF41B0AD2E70006713B /* LLARepository.m */; };
+		D267BCFB1B0AD86C0006713B /* LLAPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BCFA1B0AD86C0006713B /* LLAPost.m */; };
+		D267BD021B0ADA990006713B /* LLAParseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BD011B0ADA990006713B /* LLAParseAdapter.m */; };
+		D267BD071B0AE28D0006713B /* LLAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BD051B0AE28D0006713B /* LLAProfileViewController.m */; };
+		D267BD081B0AE28D0006713B /* LLAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D267BD061B0AE28D0006713B /* LLAProfileViewController.xib */; };
 		D2A150EC1B09536000922600 /* LLAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A150EB1B09536000922600 /* LLAUser.m */; };
 		D2BD5E841B05A6DC00E9F17E /* LLAPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */; };
 		D2BD5E861B05AD0400E9F17E /* LLAPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */; };
@@ -62,7 +67,18 @@
 		821E580E7FE979187BD0A00A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D237B1691B00025400242170 /* LLALoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALoginView.h; path = Splash/LLALoginView.h; sourceTree = "<group>"; };
 		D237B16A1B00025400242170 /* LLALoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALoginView.m; path = Splash/LLALoginView.m; sourceTree = "<group>"; };
-		D237B16B1B00025400242170 /* LLALoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLALoginView.xib; path = Splash/LLALoginView.xib; sourceTree = "<group>"; };
+		D256CC391B0AE819008BB9DB /* LLALandingNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALandingNavigationViewController.h; path = Landing/LLALandingNavigationViewController.h; sourceTree = "<group>"; };
+		D256CC3A1B0AE819008BB9DB /* LLALandingNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALandingNavigationViewController.m; path = Landing/LLALandingNavigationViewController.m; sourceTree = "<group>"; };
+		D267BCF31B0AD2E70006713B /* LLARepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLARepository.h; path = Repository/LLARepository.h; sourceTree = "<group>"; };
+		D267BCF41B0AD2E70006713B /* LLARepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLARepository.m; path = Repository/LLARepository.m; sourceTree = "<group>"; };
+		D267BCF91B0AD86C0006713B /* LLAPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAPost.h; path = Objects/LLAPost.h; sourceTree = "<group>"; };
+		D267BCFA1B0AD86C0006713B /* LLAPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAPost.m; path = Objects/LLAPost.m; sourceTree = "<group>"; };
+		D267BCFC1B0AD9150006713B /* LLARepositoryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLARepositoryProtocol.h; path = Repository/LLARepositoryProtocol.h; sourceTree = "<group>"; };
+		D267BD001B0ADA990006713B /* LLAParseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAParseAdapter.h; path = Repository/Adapters/LLAParseAdapter.h; sourceTree = "<group>"; };
+		D267BD011B0ADA990006713B /* LLAParseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAParseAdapter.m; path = Repository/Adapters/LLAParseAdapter.m; sourceTree = "<group>"; };
+		D267BD041B0AE28D0006713B /* LLAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAProfileViewController.h; path = Profile/LLAProfileViewController.h; sourceTree = "<group>"; };
+		D267BD051B0AE28D0006713B /* LLAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAProfileViewController.m; path = Profile/LLAProfileViewController.m; sourceTree = "<group>"; };
+		D267BD061B0AE28D0006713B /* LLAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLAProfileViewController.xib; path = Profile/LLAProfileViewController.xib; sourceTree = "<group>"; };
 		D2A150EA1B09536000922600 /* LLAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAUser.h; path = Objects/LLAUser.h; sourceTree = "<group>"; };
 		D2A150EB1B09536000922600 /* LLAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAUser.m; path = Objects/LLAUser.m; sourceTree = "<group>"; };
 		D2BD5E821B05A6DC00E9F17E /* LLAPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAPostViewController.h; path = Post/LLAPostViewController.h; sourceTree = "<group>"; };
@@ -164,6 +180,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D267BCF21B0AD2A40006713B /* Respository */ = {
+			isa = PBXGroup;
+			children = (
+				D267BCFF1B0ADA820006713B /* Adapters */,
+				D267BCF31B0AD2E70006713B /* LLARepository.h */,
+				D267BCF41B0AD2E70006713B /* LLARepository.m */,
+				D267BCFC1B0AD9150006713B /* LLARepositoryProtocol.h */,
+			);
+			name = Respository;
+			sourceTree = "<group>";
+		};
+		D267BCFF1B0ADA820006713B /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				D267BD001B0ADA990006713B /* LLAParseAdapter.h */,
+				D267BD011B0ADA990006713B /* LLAParseAdapter.m */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		D267BD031B0AE2520006713B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D267BD041B0AE28D0006713B /* LLAProfileViewController.h */,
+				D267BD051B0AE28D0006713B /* LLAProfileViewController.m */,
+				D267BD061B0AE28D0006713B /* LLAProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		D2A150E91B09532D00922600 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +239,8 @@
 			children = (
 				D2A150EA1B09536000922600 /* LLAUser.h */,
 				D2A150EB1B09536000922600 /* LLAUser.m */,
+				D267BCF91B0AD86C0006713B /* LLAPost.h */,
+				D267BCFA1B0AD86C0006713B /* LLAPost.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,6 +268,7 @@
 		D2F8515F1AFC485400B5D3AD /* Limitless */ = {
 			isa = PBXGroup;
 			children = (
+				D267BCF21B0AD2A40006713B /* Respository */,
 				D2A150E91B09532D00922600 /* Data */,
 				D2CDB3871B01BF6C00300BB4 /* Models */,
 				D2F851C21AFDA44800B5D3AD /* Categories */,
@@ -266,6 +315,8 @@
 				D2F851901AFC4CAD00B5D3AD /* LLALandingViewController.h */,
 				D2F851911AFC4CAD00B5D3AD /* LLALandingViewController.m */,
 				D2F851921AFC4CAD00B5D3AD /* LLALandingViewController.xib */,
+				D256CC391B0AE819008BB9DB /* LLALandingNavigationViewController.h */,
+				D256CC3A1B0AE819008BB9DB /* LLALandingNavigationViewController.m */,
 			);
 			name = Landing;
 			sourceTree = "<group>";
@@ -273,6 +324,7 @@
 		D2F851961AFC4CCA00B5D3AD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D267BD031B0AE2520006713B /* Profile */,
 				D2BD5E811B05A6B700E9F17E /* Post */,
 				D2F851BC1AFC583800B5D3AD /* DailyFeed */,
 				D2F851971AFC4CD900B5D3AD /* Splash */,
@@ -346,7 +398,6 @@
 			children = (
 				D237B1691B00025400242170 /* LLALoginView.h */,
 				D237B16A1B00025400242170 /* LLALoginView.m */,
-				D237B16B1B00025400242170 /* LLALoginView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -444,11 +495,11 @@
 			files = (
 				D2BD5E861B05AD0400E9F17E /* LLAPostViewController.xib in Resources */,
 				D2F851C11AFC585100B5D3AD /* LLADailyFeedViewController.xib in Resources */,
+				D267BD081B0AE28D0006713B /* LLAProfileViewController.xib in Resources */,
 				D2F8516E1AFC485400B5D3AD /* Images.xcassets in Resources */,
 				D2CDB3811B01B0D000300BB4 /* LLAFeedContainerViewController.xib in Resources */,
 				D2F8518D1AFC49D200B5D3AD /* LaunchScreen.xib in Resources */,
 				D2F851941AFC4CAD00B5D3AD /* LLALandingViewController.xib in Resources */,
-				D237B16D1B00025400242170 /* LLALoginView.xib in Resources */,
 				D2F8518A1AFC49B000B5D3AD /* SplashViewController.xib in Resources */,
 				D2CDB3861B01B18000300BB4 /* LLAFeedItemViewController.xib in Resources */,
 			);
@@ -501,9 +552,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D267BD021B0ADA990006713B /* LLAParseAdapter.m in Sources */,
 				D2CDB3801B01B0D000300BB4 /* LLAFeedContainerViewController.m in Sources */,
 				D2F851661AFC485400B5D3AD /* AppDelegate.m in Sources */,
 				D2F851631AFC485400B5D3AD /* main.m in Sources */,
+				D256CC3B1B0AE819008BB9DB /* LLALandingNavigationViewController.m in Sources */,
 				D2CDB3851B01B18000300BB4 /* LLAFeedItemViewController.m in Sources */,
 				D237B16C1B00025400242170 /* LLALoginView.m in Sources */,
 				D2F851C51AFDA49700B5D3AD /* UIColor+LimitlessColors.m in Sources */,
@@ -512,6 +565,9 @@
 				D2A150EC1B09536000922600 /* LLAUser.m in Sources */,
 				D2BD5E841B05A6DC00E9F17E /* LLAPostViewController.m in Sources */,
 				D2F851891AFC49B000B5D3AD /* SplashViewController.m in Sources */,
+				D267BCF51B0AD2E70006713B /* LLARepository.m in Sources */,
+				D267BCFB1B0AD86C0006713B /* LLAPost.m in Sources */,
+				D267BD071B0AE28D0006713B /* LLAProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
