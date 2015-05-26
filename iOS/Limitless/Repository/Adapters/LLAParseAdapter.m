@@ -19,7 +19,7 @@
     [query includeKey:@"following"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
-            
+            NSLog(@"getPostsWithBlockCall: %@", error);
         } else {
             NSMutableArray *userList = [NSMutableArray new];
             

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LLALoginActionDelegate.h"
+#import "LLASignUpActionDelegate.h"
 
-@interface SplashViewController : UIViewController <LLALoginActionDelegate>
+@interface SplashViewController : UIViewController <LLALoginActionDelegate, LLASignUpActionDelegate>
 
 @end

@@ -40,6 +40,7 @@
     [self addSubview:self.usernameField];
     
     [self setPasswordField:[self initializeNewUITextField]];
+    [self.passwordField setSecureTextEntry:YES];
     [self addSubview:self.passwordField];
     
     [self setLoginButton:[UIButton new]];

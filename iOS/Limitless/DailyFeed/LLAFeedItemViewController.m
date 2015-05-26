@@ -78,21 +78,18 @@
     PFFile *mainFile = (PFFile*)[self.postObject objectForKey:@"image"];
     LLAUser *poster = (LLAUser*)[self.postObject objectForKey:@"user"];
     
+    PFFile *opProfileImage = (PFFile *) [poster objectForKey:@"profileImage"];
+    
     NSURLRequest *postImageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:mainFile.url]
                                                       cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                   timeoutInterval:60];
     
-    NSURLRequest *posterImageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:poster.profileImage.url]
+    NSURLRequest *posterImageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:opProfileImage.url]
                                                       cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                   timeoutInterval:60];
     
     [self.postImage setImageWithURLRequest:postImageRequest placeholderImage:nil success:nil failure:nil];
     [self.opImage setImageWithURLRequest:posterImageRequest placeholderImage:nil success:nil failure:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

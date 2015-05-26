@@ -27,12 +27,15 @@ const CGFloat sideLength = 50.f;
     [self initAndConstrainViews];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void) initAndConstrainViews {
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissView:)];
+    
+    [self.view addGestureRecognizer:tap];
+    
     [self.videoButtonContainer setClipsToBounds:YES];
     [self.videoButtonContainer.layer setCornerRadius:50.f];
     [self.videoButton setBackgroundColor:[UIColor blackColor]];
@@ -44,6 +47,10 @@ const CGFloat sideLength = 50.f;
     [self.pictureButton setBackgroundColor:[UIColor blackColor]];
     [self.pictureButton setClipsToBounds:YES];
     [self.pictureButton.layer setCornerRadius:25.f];
+}
+
+- (void) dismissView:(UITapGestureRecognizer *)recognizer {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

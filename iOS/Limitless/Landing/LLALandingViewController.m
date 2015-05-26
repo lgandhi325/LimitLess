@@ -12,13 +12,17 @@
 #import "LLAFeedContainerViewController.h"
 #import "LLAProfileViewController.h"
 #import "LLAPostViewController.h"
+#import "LLALandingIconView.h"
 #import "LLAUser.h"
+#import "LLAUserSearchViewController.h"
 #import <Parse/Parse.h>
 
 @interface LLALandingViewController ()
-@property (weak, nonatomic) IBOutlet UIView *dailyFeedContainer;
-@property (weak, nonatomic) IBOutlet UIView *socialContainer;
-@property (weak, nonatomic) IBOutlet UIView *profileContainer;
+
+@property (nonatomic) LLALandingIconView *dailyFeedView;
+@property (nonatomic) LLALandingIconView *postView;
+@property (nonatomic) LLALandingIconView *profileView;
+@property (nonatomic) LLALandingIconView *socialView;
 
 @end
 
@@ -26,65 +30,92 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configure];
+}
+
+- (void) configure {
+    [self.navigationController setNavigationBarHidden:YES];
     
-    [self setDailyFeedTapGesture];
-}
-
-- (void)setDailyFeedTapGesture {
-//    UIGestureRecognizer *dfTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self
-//                                                                           action:@selector(handleDailyFeedTap:)];
-//    dfTapGR.delegate = self;
-//    [self.dailyFeedContainer addGestureRecognizer:dfTapGR];
-//    [self.socialContainer addGestureRecognizer:dfTapGR];
-//    [self.profileContainer addGestureRecognizer:dfTapGR];
-}
-
-- (void)setSocialTapGesture {
-    UIGestureRecognizer *sTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                           action:@selector(handleSocialTap:)];
-    sTapGR.delegate = self;
-    [self.dailyFeedContainer addGestureRecognizer:sTapGR];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)handleDailyFeedTap:(UITapGestureRecognizer *)sender {
-    if(sender.view == self.dailyFeedContainer) {
-        LLAFeedContainerViewController *dfvc = [LLAFeedContainerViewController new];
-        [self presentViewController:dfvc animated:YES completion:nil];
-    }
+    [self setDailyFeedView:[[LLALandingIconView alloc] initWithTitle:@"Daily Feed" andImage:[UIImage imageNamed:@"FullSizedRender"]]];
+    [self.dailyFeedView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.dailyFeedView addTarget:self action:@selector(dailyFeedTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.dailyFeedView];
     
-    if(sender.view == self.socialContainer) {
-        LLAPostViewController *dfvc = [LLAPostViewController new];
-        self.definesPresentationContext = YES; //self is presenting view controller
-        dfvc.view.backgroundColor = [UIColor clearColor];
-        dfvc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-        [self presentViewController:dfvc animated:YES completion:nil];
-    }
+    [self setPostView:[[LLALandingIconView alloc] initWithTitle:@"Post" andImage:[UIImage imageNamed:@"FullSizedRender"]]];
+    [self.postView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.postView addTarget:self action:@selector(postTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.postView];
     
-    if(sender.view == self.profileContainer) {
-        LLAProfileViewController *profileVC = [LLAProfileViewController new];
-        [profileVC setUser:[LLAUser currentUser]];
-        [self presentViewController:profileVC animated:YES completion:nil];
-    }
+    [self setProfileView:[[LLALandingIconView alloc] initWithTitle:@"Profile" andImage:[UIImage imageNamed:@"FullSizedRender"]]];
+    [self.profileView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.profileView addTarget:self action:@selector(profileTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.profileView];
+    
+    [self setSocialView:[[LLALandingIconView alloc] initWithTitle:@"Social" andImage:[UIImage imageNamed:@"FullSizedRender"]]];
+    [self.socialView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.socialView addTarget:self action:@selector(socialTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.socialView];
+    
+    [self constrainViews];
 }
 
-- (void)handleSocialTap:(UITapGestureRecognizer *)sender {
-    [LLAUser logOut];
-    SplashViewController *svc = [SplashViewController new];
-    [self presentViewController:svc animated:YES completion:nil];
+- (void) constrainViews {
+    NSDictionary *views = @{ @"dailyFeed": self.dailyFeedView,
+                             @"social": self.socialView,
+                             @"post": self.postView,
+                             @"profile": self.profileView
+                             };
+    
+    CGFloat sidewidth = (self.view.bounds.size.width - 150 - 150 - 10) / 9;
+    
+    NSDictionary *metrics = @{ @"marginLength": @(sidewidth),
+                               @"viewSize": @(150) };
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(marginLength)-[dailyFeed(viewSize)]-10-[post(viewSize)]"
+                                                                      options:0
+                                                                      metrics:metrics
+                                                                        views:views]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(marginLength)-[profile(viewSize)]-10-[social(viewSize)]"
+                                                                      options:0
+                                                                      metrics:metrics
+                                                                        views:views]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[dailyFeed(viewSize)]-10-[profile(viewSize)]-(marginLength)-|"
+                                                                      options:0
+                                                                      metrics:metrics
+                                                                        views:views]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[post(viewSize)]-10-[social(viewSize)]-(marginLength)-|"
+                                                                      options:0
+                                                                      metrics:metrics
+                                                                        views:views]];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) dailyFeedTapped:(id) sender {
+    LLAFeedContainerViewController *dfvc = [LLAFeedContainerViewController new];
+    [self.navigationController pushViewController:dfvc animated:YES];
 }
-*/
+
+- (void) postTapped:(id) sender {
+    LLAPostViewController *dfvc = [LLAPostViewController new];
+    
+    self.providesPresentationContextTransitionStyle = YES;
+    self.definesPresentationContext = YES;
+    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    
+    [self.navigationController pushViewController:dfvc animated:YES];
+}
+
+- (void) socialTapped:(id)sender {
+    LLAUserSearchViewController *searchVC = [LLAUserSearchViewController new];
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
+
+- (void) profileTapped:(id) sender {
+    LLAProfileViewController *profileVC = [LLAProfileViewController new];
+    [profileVC setUser:[LLAUser currentUser]];
+    [self.navigationController pushViewController:profileVC animated:YES];
+}
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "SplashViewController.h"
-#import "LLALandingViewController.h"
+#import "LLALandingNavigationViewController.h"
 #import "LLALoginView.h"
+#import "LLASignUpView.h"
 #import "LLAUser.h"
 #import <UIView+Toast.h>
 #import <Parse/Parse.h>
@@ -33,9 +34,10 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
 @property (weak, nonatomic) IBOutlet UILabel *subtitle;
 
 @property (nonatomic) LLALoginView *loginView;
+@property (nonatomic) LLASignUpView *signUpView;
 @property (nonatomic) LLASplashScreenState viewState;
 @property (nonatomic) BOOL keyboardOpen;
-
+@property (nonatomic) BOOL alreadyAuthenticated;
 @end
 
 @implementation SplashViewController
@@ -70,8 +72,8 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
     
     LLAUser *currentUser = [LLAUser currentUser];
     if([currentUser isAuthenticated]) {
-        LLALandingViewController *lvc = [LLALandingViewController new];
-        [self presentViewController:lvc animated:YES completion:nil];
+        LLALandingNavigationViewController *lvc = [LLALandingNavigationViewController new];
+        [self.view.window.rootViewController presentViewController:lvc animated:YES completion:nil];
     } else {
         [self animateButtonContainer];
     }
@@ -81,13 +83,26 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
     [self.transparency setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.60f]];
     
     [self setLoginView:[LLALoginView new]];
-    [self.loginView setHidden:YES];
+    [self.loginView setAlpha:0.f];
     [self.loginView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.loginView setDelegate:self];
     [self.view addSubview:self.loginView];
     
-    NSDictionary *viewsDictionary = @{ @"loginView": self.loginView };
-     NSDictionary *metrics = @{ @"viewHeight": @(SECONDARY_VIEW_HEIGHT) };
+    [self setSignUpView:[LLASignUpView new]];
+    [self.signUpView setAlpha:0.f];
+    [self.signUpView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.signUpView setDelegate:self];
+    [self.view addSubview:self.signUpView];
+    
+    [self constrainViews];
+}
+
+- (void) constrainViews {
+    NSDictionary *viewsDictionary = @{ @"loginView": self.loginView,
+                                       @"signUpView": self.signUpView
+                                       };
+    
+    NSDictionary *metrics = @{ @"viewHeight": @(SECONDARY_VIEW_HEIGHT) };
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[loginView(viewHeight)]|"
                                                                       options:0
@@ -99,13 +114,15 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
                                                                       metrics:metrics
                                                                         views:viewsDictionary]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.loginView
-                                                          attribute:NSLayoutAttributeBottom
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeBottom
-                                                         multiplier:1.f
-                                                           constant:0.f]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[signUpView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewsDictionary]];
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[signUpView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewsDictionary]];
 }
 
 - (void) animateTitleContainer
@@ -135,9 +152,15 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
 }
 - (IBAction)logInButtonTapped:(id)sender {
     [self setViewState:LLASplashScreenStateLogin];
-    [self.primaryActionButtonContainer setHidden:YES];
-    [self.loginView setHidden:NO];
+    [self animateView:self.loginView shouldShow:YES];
+}
+
+- (IBAction)signUpButtonTapped:(id)sender {
+    [self setViewState:LLASplashScreenStateSignUp];
+    [self.signUpView setAlpha:1.f];
+    [self.primaryActionButtonContainer setAlpha:0.f];
     
+    //[self animateView:self.signUpView shouldShow:YES];
 }
 
 - (void) attempLogin {
@@ -145,7 +168,7 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
     [PFUser logInWithUsernameInBackground:@"tgb" password:@"test1234"
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
-                                            LLALandingViewController *lvc = [LLALandingViewController new];
+                                            LLALandingNavigationViewController *lvc = [LLALandingNavigationViewController new];
                                             [weakSelf presentViewController:lvc animated:YES completion:nil];
                                         } else {
                                             [self.view makeToast:error.description
@@ -162,11 +185,15 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
 }
 
 - (void)loginActionRequestedFromLoginView:(LLALoginView *)view asUser:(NSString *)user withPassword:(NSString *)password {
+    [self loginAsUser:user withPassword:password];
+}
+
+- (void)loginAsUser:(NSString *)username withPassword:(NSString *) password {
     __weak typeof(self) weakSelf = self;
-    [PFUser logInWithUsernameInBackground:user password:password
+    [PFUser logInWithUsernameInBackground:username password:password
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
-                                            LLALandingViewController *lvc = [LLALandingViewController new];
+                                            LLALandingNavigationViewController *lvc = [LLALandingNavigationViewController new];
                                             [weakSelf presentViewController:lvc animated:YES completion:nil];
                                         } else {
                                             [self.view makeToast:error.description
@@ -176,13 +203,36 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
                                     }];
 }
 
+- (void)signUpActionRequestedFromSignUpView:(LLASignUpView *)view withEmail:(NSString *)email firstname:(NSString *)firstname lastname:(NSString *)lastname asUser:(NSString *)user withPassword:(NSString *)password {
+    
+    LLAUser *newUser = [[LLAUser alloc] init];
+    [newUser setEmail:email];
+    [newUser setFirstname:firstname];
+    [newUser setLastname:lastname];
+    [newUser setUsername:user];
+    [newUser setPassword:password];
+
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(error) {
+            NSLog(@"%@", error);
+        } else {
+            [self loginAsUser:user withPassword:password];
+        }
+    }];
+}
+
 - (void)backActionRequestedFromLoginView:(LLALoginView *)view {
-    [self.primaryActionButtonContainer setHidden:NO];
-    [self.loginView setHidden:YES];
+    [self setViewState:LLASplashScreenStateDefault];
+    [self animateView:view shouldShow:NO];
+}
+
+- (void) backActionRequestedFromSignUpView:(LLASignUpView *)view {
+    [self setViewState:LLASplashScreenStateDefault];
+    [self animateView:view shouldShow:NO];
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
-    if(self.keyboardOpen) return;
+    //if(self.keyboardOpen) return;
     self.keyboardOpen = YES;
     
     NSDictionary* info = [notification userInfo];
@@ -219,11 +269,24 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
     } else {
         newOrigin.y = yPos;
     }
-    slidingView.frame = CGRectMake(newOrigin.x, newOrigin.y, slidingView.frame.size.width, slidingView.frame.size.height);
+    [slidingView setFrame:CGRectMake(0, newOrigin.y, slidingView.frame.size.width, slidingView.frame.size.height)];
     [slidingView setNeedsDisplay];
+}
+
+- (void)animateView:(UIView *)view shouldShow:(BOOL)show {
+    [UIView animateWithDuration:ANIMATION_DURATION
+                          delay: 0.f
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.primaryActionButtonContainer.alpha = show ? 0 : 1;
+                         view.alpha = show ? 1 : 0;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 -(void)dismissKeyboard {
     [self.view endEditing:YES];
 }
+    
 @end

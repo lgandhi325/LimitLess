@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface LLAPost : NSObject
+@interface LLAPost : PFObject
 
 @end

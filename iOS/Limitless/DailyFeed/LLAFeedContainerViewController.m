@@ -27,47 +27,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self retrieveData];
     [self configurePageContoller];
+    [self retrieveData];
 }
 
 - (IBAction)backButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) retrieveData {
+    __weak typeof(self) weakSelf = self;
     [[LLARepository default] postsWithBlock:^(NSArray *data, NSError *error) {
-        self.posts = data;
-        [self.pageController reloadInputViews];
+        weakSelf.posts = data;
+        
+        LLAFeedItemViewController *viewControllerObject = [weakSelf viewControllerAtIndex:0];
+        [weakSelf.pageController setViewControllers:[NSArray arrayWithObject:viewControllerObject]
+                                      direction:UIPageViewControllerNavigationDirectionForward
+                                       animated:YES
+                                     completion:nil];
+        
+        [weakSelf.pageController reloadInputViews];
     }];
 }
 
 - (void)configurePageContoller {
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
     self.pageController.dataSource = self;
     
-    CGRect frame = self.view.bounds;
+    CGRect frame = self.view.frame;
     frame.origin.y = self.topDividerView.frame.origin.y + self.topDividerView.frame.size.height;
     frame.size.height = self.view.bounds.size.height - frame.origin.y;
     [[self.pageController view] setFrame:frame];
-    
-    LLAFeedItemViewController *viewControllerObject = [self viewControllerAtIndex:0];
-    
-    NSArray *viewControllers = [NSArray arrayWithObject:viewControllerObject];
-    
-    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    [self addChildViewController:self.pageController];
-    
-    [[self view] addSubview:[self.pageController view]];
-    
-    [self.pageController didMoveToParentViewController:self];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self addChildViewController:self.pageController];
+    [[self view] addSubview:[self.pageController view]];
+    [self.pageController didMoveToParentViewController:self];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {

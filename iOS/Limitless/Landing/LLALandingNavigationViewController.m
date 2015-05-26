@@ -11,6 +11,8 @@
 
 @interface LLALandingNavigationViewController ()
 
+@property(nonatomic, retain) UINavigationController *navController;
+
 @end
 
 @implementation LLALandingNavigationViewController
@@ -18,23 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LLALandingViewController *landingVC = [LLALandingViewController new];
-    [self.view addSubview:landingVC.view];
+    LLALandingViewController *one = [LLALandingViewController new];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:one];
+    [self.view addSubview:self.navController.view];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

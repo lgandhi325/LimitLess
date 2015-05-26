@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LLAPostViewController : UIViewController
+@interface LLAPostViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

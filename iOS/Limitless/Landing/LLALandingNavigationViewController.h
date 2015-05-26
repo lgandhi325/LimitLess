@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LLALandingNavigationViewController : UIViewController
+@interface LLALandingNavigationViewController : UINavigationController
 
 @end
