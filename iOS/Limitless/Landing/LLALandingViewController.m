@@ -43,7 +43,7 @@
 }
 
 - (void) configure {
-    [self setDailyFeedView:[[LLALandingIconView alloc] initWithTitle:@"Daily Feed!" andImage:[UIImage imageNamed:@"Globe"]]];
+    [self setDailyFeedView:[[LLALandingIconView alloc] initWithTitle:@"Daily Feed" andImage:[UIImage imageNamed:@"Globe"]]];
     [self.dailyFeedView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.dailyFeedView addTarget:self action:@selector(dailyFeedTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.dailyFeedView];
