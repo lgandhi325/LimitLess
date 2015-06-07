@@ -88,6 +88,8 @@
 }
 
 - (void) getLastPosts {
+    [self.seeAllPostsButton setHidden:YES];
+    
     PFQuery *postsQuery = [PFQuery queryWithClassName:@"Post"];
     [postsQuery whereKey:@"user" equalTo:[PFUser currentUser]];
     [postsQuery setLimit:3];

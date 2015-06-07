@@ -11,6 +11,9 @@
 #import "SplashViewController.h"
 #import "LLALandingViewController.h"
 
+NSString *const PARSE_APPLICATION_ID = @"3pGycgMOZVb4S4QXaOxbE5SCT2jGrcqUDcmj3IrK";
+NSString *const PARSE_CLIENT_ID = @"7BINGAYUVWEeDp21RMysBJ1qSn4C6izd47W39IR6";
+
 @interface AppDelegate ()
 
 @end
@@ -22,8 +25,8 @@
     [Parse enableLocalDatastore];
     
     // Initialize Parse.
-    [Parse setApplicationId:@"3pGycgMOZVb4S4QXaOxbE5SCT2jGrcqUDcmj3IrK"
-                  clientKey:@"7BINGAYUVWEeDp21RMysBJ1qSn4C6izd47W39IR6"];
+    [Parse setApplicationId:PARSE_APPLICATION_ID
+                  clientKey:PARSE_CLIENT_ID];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     SplashViewController *viewController = [SplashViewController new];

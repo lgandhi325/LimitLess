@@ -19,22 +19,27 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
+@property (nonatomic) UIView *front;
+@property (nonatomic) UIView *back;
+
 @end
 
 @implementation LLAFeedItemViewController
 
 - (IBAction)flipButtonTapped:(id)sender {
-    UIView *flippedView = [[UIView alloc] initWithFrame:self.postImage.frame];
-    [flippedView setBackgroundColor:[UIColor blueColor]];
-    
-    [UIView transitionFromView:self.postImage
-                        toView:nil
+    [UIView transitionFromView:self.front
+                        toView:self.back
                       duration:1.0
                        options:UIViewAnimationOptionTransitionFlipFromLeft
                     completion:^(BOOL finished) {
+                        UIView *temp = self.front;
+                        self.front = self.back;
+                        self.back = temp;
+                        [sender addTarget:self action:@selector(flipButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
                     }
      ];
 }
+
 - (IBAction)likeButtonTapped:(id)sender {
     if(self.likeButton.selected) {
         [self.likeButton setImage:[UIImage imageNamed:@"Star-Unselected"] forState:UIControlStateNormal];
@@ -90,6 +95,13 @@
     
     [self.postImage setImageWithURLRequest:postImageRequest placeholderImage:nil success:nil failure:nil];
     [self.opImage setImageWithURLRequest:posterImageRequest placeholderImage:nil success:nil failure:nil];
+    
+    [self.postImage setClipsToBounds:YES];
+    self.front = self.postImage;
+    
+    UIView *newView = [[UIView alloc] initWithFrame:self.postImage.frame];
+    [newView setBackgroundColor:[UIColor purpleColor]];
+    self.back = newView;
 }
 
 @end

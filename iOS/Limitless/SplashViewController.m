@@ -8,8 +8,8 @@
 
 #import "SplashViewController.h"
 #import "LLALandingNavigationViewController.h"
-#import "LLALoginView.h"
-#import "LLASignUpView.h"
+#import "LLASplashLoginView.h"
+#import "LLASplashSignUpView.h"
 #import "LLAUser.h"
 #import <UIView+Toast.h>
 #import <Parse/Parse.h>
@@ -33,8 +33,8 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
 @property (weak, nonatomic) IBOutlet UILabel *limitlessTitle;
 @property (weak, nonatomic) IBOutlet UILabel *subtitle;
 
-@property (nonatomic) LLALoginView *loginView;
-@property (nonatomic) LLASignUpView *signUpView;
+@property (nonatomic) LLASplashLoginView *loginView;
+@property (nonatomic) LLASplashSignUpView *signUpView;
 @property (nonatomic) LLASplashScreenState viewState;
 @property (nonatomic) BOOL keyboardOpen;
 @property (nonatomic) BOOL alreadyAuthenticated;
@@ -82,13 +82,13 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
 - (void)initializeSupplementaryViews {
     [self.transparency setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.60f]];
     
-    [self setLoginView:[LLALoginView new]];
+    [self setLoginView:[LLASplashLoginView new]];
     [self.loginView setAlpha:0.f];
     [self.loginView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.loginView setDelegate:self];
     [self.view addSubview:self.loginView];
     
-    [self setSignUpView:[LLASignUpView new]];
+    [self setSignUpView:[LLASplashSignUpView new]];
     [self.signUpView setAlpha:0.f];
     [self.signUpView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.signUpView setDelegate:self];
@@ -184,13 +184,13 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loginActionRequestedFromLoginView:(LLALoginView *)view asUser:(NSString *)user withPassword:(NSString *)password {
+- (void)loginActionRequestedFromLoginView:(LLASplashLoginView *)view asUser:(NSString *)user withPassword:(NSString *)password {
     [self loginAsUser:user withPassword:password];
 }
 
 - (void)loginAsUser:(NSString *)username withPassword:(NSString *) password {
     __weak typeof(self) weakSelf = self;
-    [PFUser logInWithUsernameInBackground:username password:password
+    [PFUser logInWithUsernameInBackground:@"antlip" password:@"test1234"
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             LLALandingNavigationViewController *lvc = [LLALandingNavigationViewController new];
@@ -203,7 +203,7 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
                                     }];
 }
 
-- (void)signUpActionRequestedFromSignUpView:(LLASignUpView *)view withEmail:(NSString *)email firstname:(NSString *)firstname lastname:(NSString *)lastname asUser:(NSString *)user withPassword:(NSString *)password {
+- (void)signUpActionRequestedFromSignUpView:(LLASplashSignUpView *)view withEmail:(NSString *)email firstname:(NSString *)firstname lastname:(NSString *)lastname asUser:(NSString *)user withPassword:(NSString *)password {
     
     LLAUser *newUser = [[LLAUser alloc] init];
     [newUser setEmail:email];
@@ -221,12 +221,12 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
     }];
 }
 
-- (void)backActionRequestedFromLoginView:(LLALoginView *)view {
+- (void)backActionRequestedFromLoginView:(LLASplashLoginView *)view {
     [self setViewState:LLASplashScreenStateDefault];
     [self animateView:view shouldShow:NO];
 }
 
-- (void) backActionRequestedFromSignUpView:(LLASignUpView *)view {
+- (void) backActionRequestedFromSignUpView:(LLASplashSignUpView *)view {
     [self setViewState:LLASplashScreenStateDefault];
     [self animateView:view shouldShow:NO];
 }
@@ -287,6 +287,10 @@ typedef NS_ENUM (NSInteger, LLASplashScreenState) {
 
 -(void)dismissKeyboard {
     [self.view endEditing:YES];
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
 }
     
 @end

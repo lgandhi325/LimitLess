@@ -8,6 +8,8 @@
 
 #import "LLAFeedContainerViewController.h"
 #import "LLAFeeditemViewController.h"
+#import "LLADailyTickerViewController.h"
+#import "LLALoadingViewController.h"
 #import "LLAUser.h"
 #import "LLARepository.h"
 #import "UIView+Toast.h"
@@ -27,6 +29,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setPosts:[NSMutableArray new]];
+    
     [self configurePageContoller];
     [self retrieveData];
 }
@@ -39,14 +44,11 @@
     __weak typeof(self) weakSelf = self;
     [[LLARepository default] postsWithBlock:^(NSArray *data, NSError *error) {
         weakSelf.posts = data;
-        
-        LLAFeedItemViewController *viewControllerObject = [weakSelf viewControllerAtIndex:0];
+        UIViewController *viewControllerObject = [weakSelf viewControllerAtIndex:0];
         [weakSelf.pageController setViewControllers:[NSArray arrayWithObject:viewControllerObject]
                                       direction:UIPageViewControllerNavigationDirectionForward
                                        animated:YES
                                      completion:nil];
-        
-        [weakSelf.pageController reloadInputViews];
     }];
 }
 
@@ -55,9 +57,15 @@
     self.pageController.dataSource = self;
     
     CGRect frame = self.view.frame;
-    frame.origin.y = self.topDividerView.frame.origin.y + self.topDividerView.frame.size.height;
-    frame.size.height = self.view.bounds.size.height - frame.origin.y;
+    frame.origin.y = self.topDividerView.frame.origin.y + self.topDividerView.frame.size.height + 20.f;
+    frame.size.height = self.view.bounds.size.height - frame.origin.y - 20.f;
     [[self.pageController view] setFrame:frame];
+    
+    UIViewController *viewControllerObject = [LLALoadingViewController new];
+    [self.pageController setViewControllers:[NSArray arrayWithObject:viewControllerObject]
+                                      direction:UIPageViewControllerNavigationDirectionForward
+                                       animated:YES
+                                     completion:nil];
 
     [self addChildViewController:self.pageController];
     [[self view] addSubview:[self.pageController view]];
@@ -88,12 +96,16 @@
     return [self viewControllerAtIndex:index];
 }
 
-- (LLAFeedItemViewController *) viewControllerAtIndex:(NSInteger)index {
-    
-    LLAFeedItemViewController *vc = [LLAFeedItemViewController new];
-    [vc setIndexNumber:index];
-    [vc setPostObject:self.posts[index]];
-    return vc;
+- (UIViewController *) viewControllerAtIndex:(NSInteger)index {
+    if(index == 0) {
+        LLADailyTickerViewController *dtvc = [LLADailyTickerViewController new];
+        return dtvc;
+    } else {
+        LLAFeedItemViewController *vc = [LLAFeedItemViewController new];
+        [vc setIndexNumber:index];
+        [vc setPostObject:self.posts[index]];
+        return vc;
+    }
 }
 
 @end

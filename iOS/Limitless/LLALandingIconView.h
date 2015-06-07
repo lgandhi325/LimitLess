@@ -10,6 +10,7 @@
 
 @interface LLALandingIconView : UIButton
 
-- (id) initWithTitle:(NSString *)title andImage:(UIImage *)image NS_DESIGNATED_INITIALIZER;
+- (id) initWithTitle:(NSString *)title andImage:(UIImage *)image;
+- (id) initWithTitle:(NSString *)title andImageURL:(NSURL *)imageUrl;
 
 @end

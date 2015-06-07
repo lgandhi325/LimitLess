@@ -27,6 +27,8 @@
                 [userList addObject:[object objectForKey:@"following"]];
             }
             
+            [userList addObject:[PFUser currentUser]];
+            
             PFQuery *postsQuery = [PFQuery queryWithClassName:@"Post"];
             [postsQuery whereKey:@"user" containedIn:userList];
             [postsQuery includeKey:@"user"];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LLALandingViewController : UIViewController
+@interface LLALandingViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

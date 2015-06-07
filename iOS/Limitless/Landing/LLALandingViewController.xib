@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLALandingViewController">
             <connections>
+                <outlet property="subtitleLabel" destination="aBw-UY-TxR" id="s8l-m2-v4M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limitless" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsf-qL-TL2">
-                    <rect key="frame" x="0.0" y="88" width="600" height="100"/>
+                    <rect key="frame" x="0.0" y="50" width="600" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="eWD-SC-yMF"/>
                     </constraints>
@@ -24,7 +25,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unleash your potential." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBw-UY-TxR">
-                    <rect key="frame" x="0.0" y="155" width="600" height="21"/>
+                    <rect key="frame" x="0.0" y="110" width="600" height="21"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -35,8 +36,8 @@
                 <constraint firstAttribute="trailing" secondItem="Gsf-qL-TL2" secondAttribute="trailing" id="2oQ-tb-oLS"/>
                 <constraint firstAttribute="trailing" secondItem="aBw-UY-TxR" secondAttribute="trailing" id="3ni-Iz-Q4x"/>
                 <constraint firstItem="aBw-UY-TxR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IdE-lQ-gX6"/>
-                <constraint firstItem="aBw-UY-TxR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="155" id="QHV-0k-TBT"/>
-                <constraint firstItem="Gsf-qL-TL2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="T6a-Bj-RZy"/>
+                <constraint firstItem="aBw-UY-TxR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="QHV-0k-TBT"/>
+                <constraint firstItem="Gsf-qL-TL2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="T6a-Bj-RZy"/>
                 <constraint firstItem="Gsf-qL-TL2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z6o-UL-CfP"/>
             </constraints>
         </view>

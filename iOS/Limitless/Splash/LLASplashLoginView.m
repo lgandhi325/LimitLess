@@ -6,19 +6,19 @@
 //  Copyright (c) 2015 Honycomb. All rights reserved.
 //
 
-#import "LLALoginView.h"
+#import "LLASplashLoginView.h"
 #import "UIColor+LimitlessColors.h"
 
 #define kOFFSET_FOR_KEYBOARD 80.0
 
-@interface LLALoginView ()
+@interface LLASplashLoginView ()
 @property (nonatomic) UIButton *backButton;
 @property (nonatomic) UITextField *usernameField;
 @property (nonatomic) UITextField *passwordField;
 @property (nonatomic) UIButton *loginButton;
 @end
 
-@implementation LLALoginView
+@implementation LLASplashLoginView
 
 - (id)init {
     self = [super init];
@@ -32,7 +32,7 @@
     [self setBackButton:[UIButton new]];
     [self.backButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.backButton.titleLabel setFont:[UIFont systemFontOfSize:12.f]];
-    [self.backButton setTitle:NSLocalizedString(@"< back", nil) forState:UIControlStateNormal];
+    [self.backButton setTitle:NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
     [self.backButton addTarget:self action:@selector(backButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.backButton];
     
@@ -51,10 +51,12 @@
     [self.loginButton setTitle:NSLocalizedString(@"Log in", nil) forState:UIControlStateNormal];
     [self addSubview:self.loginButton];
     
-    [self constrainViews];
+    [self setNeedsUpdateConstraints];
 }
 
-- (void) constrainViews {
+- (void) updateConstraints {
+    [super updateConstraints];
+    
     NSDictionary *views = @{ @"backButton": self.backButton,
                              @"usernameField": self.usernameField,
                              @"passwordField": self.passwordField,

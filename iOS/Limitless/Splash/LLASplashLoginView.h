@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LLALoginActionDelegate.h"
+#import "LLASplashDelegates.h"
 
-@interface LLALoginView : UIView
+@interface LLASplashLoginView : UIView
 
 @property (nonatomic) id<LLALoginActionDelegate> delegate;
 

@@ -27,14 +27,14 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D45-oA-Mu4">
-                    <rect key="frame" x="8" y="663" width="65" height="65"/>
+                    <rect key="frame" x="8" y="671" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="H7A-gO-WAo"/>
                         <constraint firstAttribute="width" constant="65" id="RB8-tt-mcx"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-SP-TFd">
-                    <rect key="frame" x="356" y="663" width="50" height="65"/>
+                    <rect key="frame" x="356" y="679" width="50" height="49"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="ch6-Lc-NPM"/>
                     </constraints>
@@ -46,7 +46,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLb-CL-PeQ">
-                    <rect key="frame" x="298" y="663" width="50" height="65"/>
+                    <rect key="frame" x="298" y="679" width="50" height="49"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Tyn-y5-Pg2"/>
                     </constraints>
@@ -55,7 +55,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzd-RD-18l">
-                    <rect key="frame" x="240" y="663" width="50" height="65"/>
+                    <rect key="frame" x="240" y="679" width="50" height="49"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Kz2-yG-5Ij"/>
                     </constraints>
@@ -78,7 +78,7 @@
                 <constraint firstItem="yzd-RD-18l" firstAttribute="centerY" secondItem="D45-oA-Mu4" secondAttribute="centerY" id="GgG-HK-HTu"/>
                 <constraint firstItem="yzd-RD-18l" firstAttribute="centerY" secondItem="PFP-SP-TFd" secondAttribute="centerY" id="L70-fa-5d5"/>
                 <constraint firstItem="yzd-RD-18l" firstAttribute="centerY" secondItem="JLb-CL-PeQ" secondAttribute="centerY" id="Ma9-Pl-bPq"/>
-                <constraint firstAttribute="bottom" secondItem="D45-oA-Mu4" secondAttribute="bottom" constant="8" id="Mzt-c5-7Ys"/>
+                <constraint firstAttribute="bottom" secondItem="D45-oA-Mu4" secondAttribute="bottom" id="Mzt-c5-7Ys"/>
                 <constraint firstItem="PFP-SP-TFd" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="abQ-wt-N4l"/>
                 <constraint firstItem="D45-oA-Mu4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="cxO-Bq-3hw"/>
                 <constraint firstItem="eKn-PH-a6U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fFE-7R-sYh"/>

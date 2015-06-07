@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D237B16C1B00025400242170 /* LLALoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D237B16A1B00025400242170 /* LLALoginView.m */; };
+		4197BC59BF639D14093B1654 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5A22DE637FF8B39D219F85 /* libPods.a */; };
+		D22D7A411B20469E00D95111 /* LLAFeedItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D7A401B20469E00D95111 /* LLAFeedItemDetailsViewController.m */; };
+		D22D7A451B238A0400D95111 /* LLASplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D7A441B238A0400D95111 /* LLASplashViewController.m */; };
+		D22D7A481B238A7500D95111 /* LLASplashButtonContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D7A471B238A7500D95111 /* LLASplashButtonContainerView.m */; };
+		D22D7A4D1B239F8600D95111 /* LLATitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D7A4C1B239F8600D95111 /* LLATitleView.m */; };
+		D237B16C1B00025400242170 /* LLASplashLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D237B16A1B00025400242170 /* LLASplashLoginView.m */; };
 		D256CC3B1B0AE819008BB9DB /* LLALandingNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D256CC3A1B0AE819008BB9DB /* LLALandingNavigationViewController.m */; };
 		D267BCF51B0AD2E70006713B /* LLARepository.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BCF41B0AD2E70006713B /* LLARepository.m */; };
 		D267BCFB1B0AD86C0006713B /* LLAPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BCFA1B0AD86C0006713B /* LLAPost.m */; };
 		D267BD021B0ADA990006713B /* LLAParseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BD011B0ADA990006713B /* LLAParseAdapter.m */; };
 		D267BD071B0AE28D0006713B /* LLAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D267BD051B0AE28D0006713B /* LLAProfileViewController.m */; };
 		D267BD081B0AE28D0006713B /* LLAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D267BD061B0AE28D0006713B /* LLAProfileViewController.xib */; };
-		D29975581B12D0B300C1C1FC /* LLASignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29975571B12D0B300C1C1FC /* LLASignUpView.m */; };
+		D29975581B12D0B300C1C1FC /* LLASplashSignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29975571B12D0B300C1C1FC /* LLASplashSignUpView.m */; };
 		D299755D1B13B07400C1C1FC /* LLALandingIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = D299755C1B13B07400C1C1FC /* LLALandingIconView.m */; };
 		D29975611B144D6600C1C1FC /* LLAUserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29975601B144D6600C1C1FC /* LLAUserSearchViewController.m */; };
+		D29975641B145CF600C1C1FC /* LLAPostItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29975631B145CF600C1C1FC /* LLAPostItemViewController.m */; };
+		D29975671B16B7F200C1C1FC /* LLADailyTickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29975661B16B7F200C1C1FC /* LLADailyTickerViewController.m */; };
+		D299756A1B16C2E600C1C1FC /* UIImageView+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = D29975691B16C2E600C1C1FC /* UIImageView+Scale.m */; };
+		D29EB7F51B1BA67900008427 /* LLALoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EB7F41B1BA67900008427 /* LLALoadingViewController.m */; };
+		D29EB7FA1B1BBB8B00008427 /* LLAPostActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EB7F91B1BBB8B00008427 /* LLAPostActionView.m */; };
 		D2A150EC1B09536000922600 /* LLAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A150EB1B09536000922600 /* LLAUser.m */; };
 		D2BD5E841B05A6DC00E9F17E /* LLAPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */; };
-		D2BD5E861B05AD0400E9F17E /* LLAPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */; };
 		D2CDB3801B01B0D000300BB4 /* LLAFeedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB37E1B01B0D000300BB4 /* LLAFeedContainerViewController.m */; };
 		D2CDB3811B01B0D000300BB4 /* LLAFeedContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2CDB37F1B01B0D000300BB4 /* LLAFeedContainerViewController.xib */; };
 		D2CDB3851B01B18000300BB4 /* LLAFeedItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB3831B01B18000300BB4 /* LLAFeedItemViewController.m */; };
@@ -42,7 +51,6 @@
 		D2F851AB1AFC566D00B5D3AD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851A91AFC566600B5D3AD /* MobileCoreServices.framework */; };
 		D2F851AE1AFC568500B5D3AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851AC1AFC567B00B5D3AD /* QuartzCore.framework */; };
 		D2F851B11AFC569900B5D3AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851AF1AFC568F00B5D3AD /* Security.framework */; };
-		D2F851B41AFC56AA00B5D3AD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851B21AFC56A200B5D3AD /* StoreKit.framework */; };
 		D2F851B71AFC56BF00B5D3AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851B51AFC56B500B5D3AD /* SystemConfiguration.framework */; };
 		D2F851B91AFC56CB00B5D3AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851B81AFC56CB00B5D3AD /* libz.dylib */; };
 		D2F851BB1AFC56DC00B5D3AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F851BA1AFC56DC00B5D3AD /* libsqlite3.dylib */; };
@@ -66,8 +74,17 @@
 /* Begin PBXFileReference section */
 		06571D409504109B018FB76A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2DAED4D1E51399AC5A6C440E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D237B1691B00025400242170 /* LLALoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALoginView.h; path = Splash/LLALoginView.h; sourceTree = "<group>"; };
-		D237B16A1B00025400242170 /* LLALoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALoginView.m; path = Splash/LLALoginView.m; sourceTree = "<group>"; };
+		5B5A22DE637FF8B39D219F85 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22D7A3F1B20469E00D95111 /* LLAFeedItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAFeedItemDetailsViewController.h; path = DailyFeed/Views/LLAFeedItemDetailsViewController.h; sourceTree = "<group>"; };
+		D22D7A401B20469E00D95111 /* LLAFeedItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAFeedItemDetailsViewController.m; path = DailyFeed/Views/LLAFeedItemDetailsViewController.m; sourceTree = "<group>"; };
+		D22D7A431B238A0400D95111 /* LLASplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLASplashViewController.h; path = Splash/Controllers/LLASplashViewController.h; sourceTree = "<group>"; };
+		D22D7A441B238A0400D95111 /* LLASplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLASplashViewController.m; path = Splash/Controllers/LLASplashViewController.m; sourceTree = "<group>"; };
+		D22D7A461B238A7500D95111 /* LLASplashButtonContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLASplashButtonContainerView.h; path = Splash/Views/LLASplashButtonContainerView.h; sourceTree = "<group>"; };
+		D22D7A471B238A7500D95111 /* LLASplashButtonContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLASplashButtonContainerView.m; path = Splash/Views/LLASplashButtonContainerView.m; sourceTree = "<group>"; };
+		D22D7A4B1B239F8600D95111 /* LLATitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLATitleView.h; path = Shared/Views/LLATitleView.h; sourceTree = "<group>"; };
+		D22D7A4C1B239F8600D95111 /* LLATitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLATitleView.m; path = Shared/Views/LLATitleView.m; sourceTree = "<group>"; };
+		D237B1691B00025400242170 /* LLASplashLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLASplashLoginView.h; path = Splash/LLASplashLoginView.h; sourceTree = "<group>"; };
+		D237B16A1B00025400242170 /* LLASplashLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLASplashLoginView.m; path = Splash/LLASplashLoginView.m; sourceTree = "<group>"; };
 		D256CC391B0AE819008BB9DB /* LLALandingNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALandingNavigationViewController.h; path = Landing/LLALandingNavigationViewController.h; sourceTree = "<group>"; };
 		D256CC3A1B0AE819008BB9DB /* LLALandingNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALandingNavigationViewController.m; path = Landing/LLALandingNavigationViewController.m; sourceTree = "<group>"; };
 		D267BCF31B0AD2E70006713B /* LLARepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLARepository.h; path = Repository/LLARepository.h; sourceTree = "<group>"; };
@@ -80,18 +97,26 @@
 		D267BD041B0AE28D0006713B /* LLAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAProfileViewController.h; path = Profile/LLAProfileViewController.h; sourceTree = "<group>"; };
 		D267BD051B0AE28D0006713B /* LLAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAProfileViewController.m; path = Profile/LLAProfileViewController.m; sourceTree = "<group>"; };
 		D267BD061B0AE28D0006713B /* LLAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLAProfileViewController.xib; path = Profile/LLAProfileViewController.xib; sourceTree = "<group>"; };
-		D29975561B12D0B300C1C1FC /* LLASignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLASignUpView.h; path = Splash/Views/LLASignUpView.h; sourceTree = "<group>"; };
-		D29975571B12D0B300C1C1FC /* LLASignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLASignUpView.m; path = Splash/Views/LLASignUpView.m; sourceTree = "<group>"; };
-		D29975591B12D28700C1C1FC /* LLASignUpActionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLASignUpActionDelegate.h; sourceTree = "<group>"; };
+		D29975561B12D0B300C1C1FC /* LLASplashSignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLASplashSignUpView.h; path = Splash/Views/LLASplashSignUpView.h; sourceTree = "<group>"; };
+		D29975571B12D0B300C1C1FC /* LLASplashSignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLASplashSignUpView.m; path = Splash/Views/LLASplashSignUpView.m; sourceTree = "<group>"; };
 		D299755B1B13B07400C1C1FC /* LLALandingIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLALandingIconView.h; sourceTree = "<group>"; };
 		D299755C1B13B07400C1C1FC /* LLALandingIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLALandingIconView.m; sourceTree = "<group>"; };
 		D299755F1B144D6600C1C1FC /* LLAUserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAUserSearchViewController.h; path = Controllers/UserSearch/LLAUserSearchViewController.h; sourceTree = "<group>"; };
 		D29975601B144D6600C1C1FC /* LLAUserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAUserSearchViewController.m; path = Controllers/UserSearch/LLAUserSearchViewController.m; sourceTree = "<group>"; };
+		D29975621B145CF600C1C1FC /* LLAPostItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAPostItemViewController.h; path = Post/LLAPostItemViewController.h; sourceTree = "<group>"; };
+		D29975631B145CF600C1C1FC /* LLAPostItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAPostItemViewController.m; path = Post/LLAPostItemViewController.m; sourceTree = "<group>"; };
+		D29975651B16B7F200C1C1FC /* LLADailyTickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLADailyTickerViewController.h; sourceTree = "<group>"; };
+		D29975661B16B7F200C1C1FC /* LLADailyTickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLADailyTickerViewController.m; sourceTree = "<group>"; };
+		D29975681B16C2E600C1C1FC /* UIImageView+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Scale.h"; path = "Categories/UIImageView+Scale.h"; sourceTree = "<group>"; };
+		D29975691B16C2E600C1C1FC /* UIImageView+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Scale.m"; path = "Categories/UIImageView+Scale.m"; sourceTree = "<group>"; };
+		D29EB7F31B1BA67900008427 /* LLALoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALoadingViewController.h; path = Controllers/Loading/LLALoadingViewController.h; sourceTree = "<group>"; };
+		D29EB7F41B1BA67900008427 /* LLALoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLALoadingViewController.m; path = Controllers/Loading/LLALoadingViewController.m; sourceTree = "<group>"; };
+		D29EB7F81B1BBB8B00008427 /* LLAPostActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAPostActionView.h; path = Post/Views/LLAPostActionView.h; sourceTree = "<group>"; };
+		D29EB7F91B1BBB8B00008427 /* LLAPostActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAPostActionView.m; path = Post/Views/LLAPostActionView.m; sourceTree = "<group>"; };
 		D2A150EA1B09536000922600 /* LLAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAUser.h; path = Objects/LLAUser.h; sourceTree = "<group>"; };
 		D2A150EB1B09536000922600 /* LLAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAUser.m; path = Objects/LLAUser.m; sourceTree = "<group>"; };
 		D2BD5E821B05A6DC00E9F17E /* LLAPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAPostViewController.h; path = Post/LLAPostViewController.h; sourceTree = "<group>"; };
 		D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAPostViewController.m; path = Post/LLAPostViewController.m; sourceTree = "<group>"; };
-		D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLAPostViewController.xib; sourceTree = "<group>"; };
 		D2CDB37D1B01B0D000300BB4 /* LLAFeedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLAFeedContainerViewController.h; path = DailyFeed/LLAFeedContainerViewController.h; sourceTree = "<group>"; };
 		D2CDB37E1B01B0D000300BB4 /* LLAFeedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLAFeedContainerViewController.m; path = DailyFeed/LLAFeedContainerViewController.m; sourceTree = "<group>"; };
 		D2CDB37F1B01B0D000300BB4 /* LLAFeedContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLAFeedContainerViewController.xib; path = DailyFeed/LLAFeedContainerViewController.xib; sourceTree = "<group>"; };
@@ -123,7 +148,6 @@
 		D2F851A91AFC566600B5D3AD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D2F851AC1AFC567B00B5D3AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2F851AF1AFC568F00B5D3AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D2F851B21AFC56A200B5D3AD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D2F851B51AFC56B500B5D3AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D2F851B81AFC56CB00B5D3AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D2F851BA1AFC56DC00B5D3AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -134,7 +158,7 @@
 		D2F851C41AFDA49700B5D3AD /* UIColor+LimitlessColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LimitlessColors.m"; path = "Categories/UIColor+LimitlessColors.m"; sourceTree = "<group>"; };
 		D2F851C61AFDD61300B5D3AD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D2F851C91AFDD63B00B5D3AD /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		D2F851D11AFDDE0500B5D3AD /* LLALoginActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLALoginActionDelegate.h; path = Splash/Delegates/LLALoginActionDelegate.h; sourceTree = "<group>"; };
+		D2F851D11AFDDE0500B5D3AD /* LLASplashDelegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLASplashDelegates.h; path = Splash/Delegates/LLASplashDelegates.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +172,6 @@
 				D2F851B91AFC56CB00B5D3AD /* libz.dylib in Frameworks */,
 				D2F851B11AFC569900B5D3AD /* Security.framework in Frameworks */,
 				D2F851B71AFC56BF00B5D3AD /* SystemConfiguration.framework in Frameworks */,
-				D2F851B41AFC56AA00B5D3AD /* StoreKit.framework in Frameworks */,
 				D2F851AB1AFC566D00B5D3AD /* MobileCoreServices.framework in Frameworks */,
 				D2F851AE1AFC568500B5D3AD /* QuartzCore.framework in Frameworks */,
 				D2F851A21AFC560300B5D3AD /* CFNetwork.framework in Frameworks */,
@@ -157,6 +180,7 @@
 				D2F8519C1AFC556400B5D3AD /* Parse.framework in Frameworks */,
 				D2F8519F1AFC55EF00B5D3AD /* AudioToolbox.framework in Frameworks */,
 				D2F8519B1AFC556400B5D3AD /* Bolts.framework in Frameworks */,
+				4197BC59BF639D14093B1654 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +201,40 @@
 				2DAED4D1E51399AC5A6C440E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B995E840766D3846AB943672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A22DE637FF8B39D219F85 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D22D7A421B2389DD00D95111 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D22D7A431B238A0400D95111 /* LLASplashViewController.h */,
+				D22D7A441B238A0400D95111 /* LLASplashViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D22D7A491B239F4E00D95111 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D22D7A4A1B239F5700D95111 /* Views */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		D22D7A4A1B239F5700D95111 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D22D7A4B1B239F8600D95111 /* LLATitleView.h */,
+				D22D7A4C1B239F8600D95111 /* LLATitleView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		D267BCF21B0AD2A40006713B /* Respository */ = {
@@ -227,6 +285,31 @@
 			name = UserSearch;
 			sourceTree = "<group>";
 		};
+		D299756B1B16C8C500C1C1FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D29EB7F61B1BA68400008427 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				D29EB7F31B1BA67900008427 /* LLALoadingViewController.h */,
+				D29EB7F41B1BA67900008427 /* LLALoadingViewController.m */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
+		D29EB7F71B1BB92B00008427 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D29EB7F81B1BBB8B00008427 /* LLAPostActionView.h */,
+				D29EB7F91B1BBB8B00008427 /* LLAPostActionView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		D2A150E91B09532D00922600 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,9 +320,11 @@
 		D2BD5E811B05A6B700E9F17E /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				D29EB7F71B1BB92B00008427 /* Views */,
 				D2BD5E821B05A6DC00E9F17E /* LLAPostViewController.h */,
 				D2BD5E831B05A6DC00E9F17E /* LLAPostViewController.m */,
-				D2BD5E851B05AD0400E9F17E /* LLAPostViewController.xib */,
+				D29975621B145CF600C1C1FC /* LLAPostItemViewController.h */,
+				D29975631B145CF600C1C1FC /* LLAPostItemViewController.m */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -247,6 +332,13 @@
 		D2CDB3771B019ACA00300BB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2CDB3821B01B18000300BB4 /* LLAFeedItemViewController.h */,
+				D2CDB3831B01B18000300BB4 /* LLAFeedItemViewController.m */,
+				D2CDB3841B01B18000300BB4 /* LLAFeedItemViewController.xib */,
+				D29975651B16B7F200C1C1FC /* LLADailyTickerViewController.h */,
+				D29975661B16B7F200C1C1FC /* LLADailyTickerViewController.m */,
+				D22D7A3F1B20469E00D95111 /* LLAFeedItemDetailsViewController.h */,
+				D22D7A401B20469E00D95111 /* LLAFeedItemDetailsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -269,6 +361,7 @@
 				D2F851791AFC485400B5D3AD /* LimitlessTests */,
 				D2F8515E1AFC485400B5D3AD /* Products */,
 				B5BA5A1DD209E32FE20CFA66 /* Pods */,
+				B995E840766D3846AB943672 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,12 +377,13 @@
 		D2F8515F1AFC485400B5D3AD /* Limitless */ = {
 			isa = PBXGroup;
 			children = (
+				D22D7A491B239F4E00D95111 /* Shared */,
 				D267BCF21B0AD2A40006713B /* Respository */,
 				D2A150E91B09532D00922600 /* Data */,
 				D2CDB3871B01BF6C00300BB4 /* Models */,
 				D2F851C21AFDA44800B5D3AD /* Categories */,
 				D2F851981AFC555A00B5D3AD /* Frameworks */,
-				D2F851961AFC4CCA00B5D3AD /* Controllers */,
+				D2F851961AFC4CCA00B5D3AD /* Workflows */,
 				D2F8518B1AFC49D200B5D3AD /* LaunchScreen.xib */,
 				D2F851641AFC485400B5D3AD /* AppDelegate.h */,
 				D2F851651AFC485400B5D3AD /* AppDelegate.m */,
@@ -338,9 +432,10 @@
 			name = Landing;
 			sourceTree = "<group>";
 		};
-		D2F851961AFC4CCA00B5D3AD /* Controllers */ = {
+		D2F851961AFC4CCA00B5D3AD /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				D29EB7F61B1BA68400008427 /* Loading */,
 				D299755E1B144D2700C1C1FC /* UserSearch */,
 				D267BD031B0AE2520006713B /* Profile */,
 				D2BD5E811B05A6B700E9F17E /* Post */,
@@ -348,12 +443,13 @@
 				D2F851971AFC4CD900B5D3AD /* Splash */,
 				D2F851951AFC4CB600B5D3AD /* Landing */,
 			);
-			name = Controllers;
+			name = Workflows;
 			sourceTree = "<group>";
 		};
 		D2F851971AFC4CD900B5D3AD /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				D22D7A421B2389DD00D95111 /* Controllers */,
 				D2F851D01AFDDD8C00B5D3AD /* Delegates */,
 				D2F851CC1AFDD7B100B5D3AD /* Views */,
 				D2F851861AFC49B000B5D3AD /* SplashViewController.h */,
@@ -371,7 +467,6 @@
 				D2F851C91AFDD63B00B5D3AD /* Accounts.framework */,
 				D2F851C61AFDD61300B5D3AD /* Social.framework */,
 				D2F851B51AFC56B500B5D3AD /* SystemConfiguration.framework */,
-				D2F851B21AFC56A200B5D3AD /* StoreKit.framework */,
 				D2F851AF1AFC568F00B5D3AD /* Security.framework */,
 				D2F851AC1AFC567B00B5D3AD /* QuartzCore.framework */,
 				D2F851A91AFC566600B5D3AD /* MobileCoreServices.framework */,
@@ -388,9 +483,7 @@
 		D2F851BC1AFC583800B5D3AD /* DailyFeed */ = {
 			isa = PBXGroup;
 			children = (
-				D2CDB3821B01B18000300BB4 /* LLAFeedItemViewController.h */,
-				D2CDB3831B01B18000300BB4 /* LLAFeedItemViewController.m */,
-				D2CDB3841B01B18000300BB4 /* LLAFeedItemViewController.xib */,
+				D299756B1B16C8C500C1C1FC /* Protocols */,
 				D2CDB3771B019ACA00300BB4 /* Views */,
 				D2F851BD1AFC585100B5D3AD /* LLADailyFeedViewController.h */,
 				D2F851BE1AFC585100B5D3AD /* LLADailyFeedViewController.m */,
@@ -407,6 +500,8 @@
 			children = (
 				D2F851C31AFDA49700B5D3AD /* UIColor+LimitlessColors.h */,
 				D2F851C41AFDA49700B5D3AD /* UIColor+LimitlessColors.m */,
+				D29975681B16C2E600C1C1FC /* UIImageView+Scale.h */,
+				D29975691B16C2E600C1C1FC /* UIImageView+Scale.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -414,10 +509,12 @@
 		D2F851CC1AFDD7B100B5D3AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D237B1691B00025400242170 /* LLALoginView.h */,
-				D237B16A1B00025400242170 /* LLALoginView.m */,
-				D29975561B12D0B300C1C1FC /* LLASignUpView.h */,
-				D29975571B12D0B300C1C1FC /* LLASignUpView.m */,
+				D237B1691B00025400242170 /* LLASplashLoginView.h */,
+				D237B16A1B00025400242170 /* LLASplashLoginView.m */,
+				D29975561B12D0B300C1C1FC /* LLASplashSignUpView.h */,
+				D29975571B12D0B300C1C1FC /* LLASplashSignUpView.m */,
+				D22D7A461B238A7500D95111 /* LLASplashButtonContainerView.h */,
+				D22D7A471B238A7500D95111 /* LLASplashButtonContainerView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -425,8 +522,7 @@
 		D2F851D01AFDDD8C00B5D3AD /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				D2F851D11AFDDE0500B5D3AD /* LLALoginActionDelegate.h */,
-				D29975591B12D28700C1C1FC /* LLASignUpActionDelegate.h */,
+				D2F851D11AFDDE0500B5D3AD /* LLASplashDelegates.h */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -483,6 +579,11 @@
 					D2F8515C1AFC485400B5D3AD = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = PFHLGXN94M;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					D2F851751AFC485400B5D3AD = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -514,7 +615,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2BD5E861B05AD0400E9F17E /* LLAPostViewController.xib in Resources */,
 				D2F851C11AFC585100B5D3AD /* LLADailyFeedViewController.xib in Resources */,
 				D267BD081B0AE28D0006713B /* LLAProfileViewController.xib in Resources */,
 				D2F8516E1AFC485400B5D3AD /* Images.xcassets in Resources */,
@@ -574,23 +674,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				D267BD021B0ADA990006713B /* LLAParseAdapter.m in Sources */,
+				D22D7A481B238A7500D95111 /* LLASplashButtonContainerView.m in Sources */,
 				D2CDB3801B01B0D000300BB4 /* LLAFeedContainerViewController.m in Sources */,
+				D22D7A411B20469E00D95111 /* LLAFeedItemDetailsViewController.m in Sources */,
 				D2F851661AFC485400B5D3AD /* AppDelegate.m in Sources */,
-				D29975581B12D0B300C1C1FC /* LLASignUpView.m in Sources */,
+				D299756A1B16C2E600C1C1FC /* UIImageView+Scale.m in Sources */,
+				D29975581B12D0B300C1C1FC /* LLASplashSignUpView.m in Sources */,
 				D2F851631AFC485400B5D3AD /* main.m in Sources */,
+				D22D7A451B238A0400D95111 /* LLASplashViewController.m in Sources */,
 				D256CC3B1B0AE819008BB9DB /* LLALandingNavigationViewController.m in Sources */,
 				D2CDB3851B01B18000300BB4 /* LLAFeedItemViewController.m in Sources */,
-				D237B16C1B00025400242170 /* LLALoginView.m in Sources */,
+				D29975641B145CF600C1C1FC /* LLAPostItemViewController.m in Sources */,
+				D237B16C1B00025400242170 /* LLASplashLoginView.m in Sources */,
+				D29975671B16B7F200C1C1FC /* LLADailyTickerViewController.m in Sources */,
 				D2F851C51AFDA49700B5D3AD /* UIColor+LimitlessColors.m in Sources */,
 				D299755D1B13B07400C1C1FC /* LLALandingIconView.m in Sources */,
 				D2F851931AFC4CAD00B5D3AD /* LLALandingViewController.m in Sources */,
 				D2F851C01AFC585100B5D3AD /* LLADailyFeedViewController.m in Sources */,
 				D2A150EC1B09536000922600 /* LLAUser.m in Sources */,
+				D22D7A4D1B239F8600D95111 /* LLATitleView.m in Sources */,
 				D2BD5E841B05A6DC00E9F17E /* LLAPostViewController.m in Sources */,
+				D29EB7F51B1BA67900008427 /* LLALoadingViewController.m in Sources */,
 				D2F851891AFC49B000B5D3AD /* SplashViewController.m in Sources */,
 				D267BCF51B0AD2E70006713B /* LLARepository.m in Sources */,
 				D267BCFB1B0AD86C0006713B /* LLAPost.m in Sources */,
 				D267BD071B0AE28D0006713B /* LLAProfileViewController.m in Sources */,
+				D29EB7FA1B1BBB8B00008427 /* LLAPostActionView.m in Sources */,
 				D29975611B144D6600C1C1FC /* LLAUserSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

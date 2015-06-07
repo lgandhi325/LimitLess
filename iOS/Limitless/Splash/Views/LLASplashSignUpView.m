@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Honycomb. All rights reserved.
 //
 
-#import "LLASignUpView.h"
+#import "LLASplashSignUpView.h"
 #import "UIColor+LimitlessColors.h"
 
-@interface LLASignUpView()
+@interface LLASplashSignUpView()
 
 @property (nonatomic) UIButton *backButton;
 @property (nonatomic) UITextField *emailField;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation LLASignUpView
+@implementation LLASplashSignUpView
 
 - (instancetype)init
 {
@@ -36,40 +36,41 @@
     [self setBackButton:[UIButton new]];
     [self.backButton setBackgroundColor:[UIColor blueColor]];
     [self.backButton.titleLabel setFont:[UIFont systemFontOfSize:12.f]];
-    [self.backButton setTitle:NSLocalizedString(@"< Back", nil) forState:UIControlStateNormal];
+    [self.backButton setTitle:NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
     [self.backButton.titleLabel setTextColor:[UIColor whiteColor]];
     [self.backButton addTarget:self action:@selector(onBackTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.backButton];
     
     [self setEmailField:[self generateTextField]];
     [self.emailField setPlaceholder:NSLocalizedString(@"Email address",nil)];
-    //[self addSubview:self.emailField];
+    [self addSubview:self.emailField];
     
     [self setFirstnameField:[self generateTextField]];
     [self.firstnameField setPlaceholder:NSLocalizedString(@"First name", nil)];
-    //[self addSubview:self.firstnameField];
+    [self addSubview:self.firstnameField];
     
     [self setLastnameField:[self generateTextField]];
     [self.lastnameField setPlaceholder:NSLocalizedString(@"Last name", nil)];
-    //[self addSubview:self.lastnameField];
+    [self addSubview:self.lastnameField];
     
     [self setUsernameField:[self generateTextField]];
     [self.usernameField setPlaceholder:NSLocalizedString(@"Username", nil)];
-    //[self addSubview:self.usernameField];
+    [self addSubview:self.usernameField];
     
     [self setPasswordField:[self generateTextField]];
     [self.passwordField setPlaceholder:NSLocalizedString(@"Password", nil)];
-    //[self addSubview:self.passwordField];
+    [self addSubview:self.passwordField];
     
     [self setSignUpButton:[UIButton new]];
     [self.signUpButton.titleLabel setText:@"Sign Up"];
     [self.signUpButton addTarget:self action:@selector(onSignUpTapped:) forControlEvents:UIControlEventTouchUpInside];
-    //[self addSubview:self.signUpButton];
+    [self addSubview:self.signUpButton];
     
-    [self constrainViews];
+    [self setNeedsUpdateConstraints];
 }
 
-- (void) constrainViews {
+- (void) updateConstraints {
+    [super updateConstraints];
     NSDictionary *viewsDictionary = @{ @"backButton": self.backButton,
                                        @"emailField": self.emailField,
                                        @"firstnameField": self.firstnameField,
@@ -79,16 +80,16 @@
                                        @"signUpButton": self.signUpButton
                                        };
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[backButton]|"//-[emailField]-[firstnameField]-[usernameField]-[passwordField]-[signUpButton]|"
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[backButton]-[emailField]-[firstnameField]-[usernameField]-[passwordField]-[signUpButton]|"
                                                                  options:0
                                                                  metrics:nil
                                                                    views:viewsDictionary]];
     
-//    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[backButton]-[emailField]-[lastnameField]-[usernameField]-[passwordField]-[signUpButton]|"
-//                                                                 options:0
-//                                                                 metrics:nil
-//                                                                   views:viewsDictionary]];
-//    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[backButton]-[emailField]-[lastnameField]-[usernameField]-[passwordField]-[signUpButton]|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:viewsDictionary]];
+
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[backButton]"
                                                                  options:0
                                                                  metrics:nil

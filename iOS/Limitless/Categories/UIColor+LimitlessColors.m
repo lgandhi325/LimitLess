@@ -11,7 +11,7 @@
 @implementation UIColor (LimitlessColors)
 
 + (UIColor*) limitlessBlueColor {
-    return [self colorWithHexString:@"#0099CC"];
+    return [UIColor colorWithRed:0/255.0 green:153/255.0 blue:204/255.0 alpha:1.f];
 }
 
 + (UIColor*)colorWithHexString:(NSString*)hex

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LLASignUpActionDelegate.h"
+#import "LLASplashDelegates.h"
 
-@interface LLASignUpView : UIView
+@interface LLASplashSignUpView : UIView
 
 @property (nonatomic) id<LLASignUpActionDelegate> delegate;
 
